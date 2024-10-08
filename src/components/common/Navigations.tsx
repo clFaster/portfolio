@@ -1,14 +1,23 @@
 import {Link} from "react-router-dom";
-import {NavBackground, Navbar, NavContainer, NavItem, NavList} from "../styled/NavigationStyled";
+import {NavBackground, Navbar, NavContainer, NavItem, NavList, ToggleButton} from "../styled/NavigationStyled";
+import {useState} from "react";
+import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 interface NavigationProps {
     active: string;
 }
 
 const Navigations = ({active}: NavigationProps) => {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <NavContainer>
-            <Navbar>
+            <ToggleButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+                <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x"/>
+            </ToggleButton>
+
+            <Navbar isOpen={isOpen}>
                 <NavBackground>
                     <NavList>
                         <NavItem isActive={active === "home"}>
