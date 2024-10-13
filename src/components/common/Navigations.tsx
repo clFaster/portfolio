@@ -1,16 +1,14 @@
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import {NavBackground, Navbar, NavContainer, NavItem, NavList, ToggleButton} from "../styled/NavigationStyled";
 import {useState} from "react";
 import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-interface NavigationProps {
-    active: string;
-}
-
-const Navigations = ({active}: NavigationProps) => {
+const Navigations = () => {
     const [isOpen, setIsOpen] = useState(false);
-
+    const location = useLocation();
+    const active = location.pathname.split("/")[1] || "home";
+    
     return (
         <NavContainer>
             <ToggleButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>

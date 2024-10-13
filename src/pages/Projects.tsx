@@ -1,15 +1,9 @@
-import {ContentWrapper, PageContent, Title} from "../components/styled/PageStyled.ts";
-import Navigations from "../components/common/Navigations.tsx";
+import {Title} from "../components/styled/PageStyled.ts";
 
 function Projects() {
     return (
         <>
-            <PageContent>
-                <Navigations active="projects"/>
-                <ContentWrapper>
-                    <Title>Projects</Title>
-                </ContentWrapper>
-            </PageContent>
+            <Title>Projects</Title>
         </>
     );
 }

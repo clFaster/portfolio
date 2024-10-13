@@ -8,10 +8,6 @@ export const HomepageLogoContainer = styled.div`
     padding-top: 130px;
 `;
 
-export const HomepageContainer = styled.div`
-    padding-top: 155px;
-`;
-
 export const HomepageFirstArea = styled.div`
     display: flex;
     justify-content: space-between;
