@@ -11,23 +11,23 @@ const Navigations = () => {
     
     return (
         <NavContainer>
-            <ToggleButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+            <ToggleButton $isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
                 <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x"/>
             </ToggleButton>
 
-            <Navbar isOpen={isOpen}>
+            <Navbar $isOpen={isOpen}>
                 <NavBackground>
                     <NavList>
-                        <NavItem isActive={active === "home"}>
+                        <NavItem $isActive={active === "home"}>
                             <Link to="/">Home</Link>
                         </NavItem>
-                        <NavItem isActive={active === "about"}>
+                        <NavItem $isActive={active === "about"}>
                             <Link to="/about">About</Link>
                         </NavItem>
-                        <NavItem isActive={active === "projects"}>
+                        <NavItem $isActive={active === "projects"}>
                             <Link to="/projects">Projects</Link>
                         </NavItem>
-                        <NavItem isActive={active === "contact"}>
+                        <NavItem $isActive={active === "contact"}>
                             <Link to="/contact">Contact</Link>
                         </NavItem>
                     </NavList>
