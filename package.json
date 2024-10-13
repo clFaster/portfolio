@@ -1,7 +1,13 @@
 {
   "name": "portfolio",
+  "version": "1.0.0",
+  "description": "A personal portfolio built with React, showcasing my projects and experience. Features responsive design and modern web development techniques.",
+  "author": {
+    "name": "Moritz Reis",
+    "email": "me@moritzreis.dev",
+    "url": "https://moritzreis.dev"
+  },
   "private": true,
-  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
