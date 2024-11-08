@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import {Subtitle, Text, Title} from "./PageStyled.ts";
 
-export const HomepageContainer = styled.div`
-    padding-top: 155px;
-`;
-
 export const HomepageFirstArea = styled.div`
     display: flex;
     justify-content: space-between;

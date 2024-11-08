@@ -1,16 +1,11 @@
-import Navigations from "../components/common/Navigations.tsx";
-import {ContentWrapper, PageContent, Title} from "../components/styled/PageStyled.ts";
+import {Title} from "../components/styled/PageStyled.ts";
 
 function Contact() {
     return (
         <>
-            <PageContent>
-                <Navigations active="contact"/>
-                <ContentWrapper>
-                    <Title>Contact</Title>
-                </ContentWrapper>
-            </PageContent>
+            <Title>Contact</Title>
         </>
+        
     );
 }
 

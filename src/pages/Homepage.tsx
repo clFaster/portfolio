@@ -1,11 +1,5 @@
-import {Helmet} from "react-helmet";
 import DATA from "../data/data";
-import SEO from "../data/seo";
-import Navigations from "../components/common/Navigations.tsx";
-
-import {ContentWrapper, PageContent} from "../components/styled/PageStyled.ts";
 import {
-    HomepageContainer,
     HomepageFirstArea,
     HomepageFirstAreaLeftSide,
     HomepageFirstAreaRightSide,
@@ -22,7 +16,8 @@ import {faGithub, faStackOverflow} from '@fortawesome/free-brands-svg-icons';
 import {faMailBulk} from '@fortawesome/free-solid-svg-icons';
 import {ProjectOverview} from "../components/common/ProjectOverview.tsx";
 import {useEffect, useState} from "react";
-
+import {Helmet} from "react-helmet";
+import SEO from "../data/seo.ts";
 
 function Homepage() {
     const helmet = SEO.find((item) => item.page === "home") || SEO[0];
@@ -52,50 +47,41 @@ function Homepage() {
                 />
             </Helmet>
 
-            <PageContent>
-                <Navigations active="home"/>
+            <HomepageFirstArea>
+                <HomepageFirstAreaLeftSide>
+                    <HomepageTitle>
+                        {DATA.homepage.title}
+                    </HomepageTitle>
+                    <HomepageText>
+                        {DATA.homepage.description}
+                    </HomepageText>
+                </HomepageFirstAreaLeftSide>
 
-                <ContentWrapper>
-                    <HomepageContainer>
-                        <HomepageFirstArea>
-                            <HomepageFirstAreaLeftSide>
-                                <HomepageTitle>
-                                    {DATA.homepage.title}
-                                </HomepageTitle>
-                                <HomepageText>
-                                    {DATA.homepage.description}
-                                </HomepageText>
-                            </HomepageFirstAreaLeftSide>
+                <HomepageFirstAreaRightSide>
+                    <HomepageImageContainer>
+                        <HomepageImageWrapper rotationAngle={rotationAngle}>
+                            <HomepageImage src="../logo.png" alt="Homepage Image"/>
+                        </HomepageImageWrapper>
+                    </HomepageImageContainer>
+                </HomepageFirstAreaRightSide>
+            </HomepageFirstArea>
 
-                            <HomepageFirstAreaRightSide>
-                                <HomepageImageContainer>
-                                    <HomepageImageWrapper rotationAngle={rotationAngle}>
-                                        <HomepageImage src="../logo.png" alt="Homepage Image"/>
-                                    </HomepageImageWrapper>
-                                </HomepageImageContainer>
-                            </HomepageFirstAreaRightSide>
-                        </HomepageFirstArea>
-
-                        <Socials>
-                            <a href={DATA.socials.github} target="_blank" rel="noreferrer">
-                                <SocialIcon icon={faGithub}/>
-                            </a>
-                            <a href={DATA.socials.stackoverflow} target="_blank" rel="noreferrer">
-                                <SocialIcon icon={faStackOverflow}/>
-                            </a>
-                            <a href={`mailto:${DATA.main.email}`} target="_blank" rel="noreferrer">
-                                <SocialIcon icon={faMailBulk}/>
-                            </a>
-                        </Socials>
-                        <HomepageProjects>
-                            <HomepageSubTitle>Projects</HomepageSubTitle>
-                            <HomepageText>Some of my projects I build over the last years.</HomepageText>
-                            <ProjectOverview/>
-                        </HomepageProjects>
-
-                    </HomepageContainer>
-                </ContentWrapper>
-            </PageContent>
+            <Socials>
+                <a href={DATA.socials.github} target="_blank" rel="noreferrer">
+                    <SocialIcon icon={faGithub}/>
+                </a>
+                <a href={DATA.socials.stackoverflow} target="_blank" rel="noreferrer">
+                    <SocialIcon icon={faStackOverflow}/>
+                </a>
+                <a href={`mailto:${DATA.main.email}`} target="_blank" rel="noreferrer">
+                    <SocialIcon icon={faMailBulk}/>
+                </a>
+            </Socials>
+            <HomepageProjects>
+                <HomepageSubTitle>Projects</HomepageSubTitle>
+                <HomepageText>Some of my projects I build over the last years.</HomepageText>
+                <ProjectOverview/>
+            </HomepageProjects>
         </>
     );
 }

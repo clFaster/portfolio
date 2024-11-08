@@ -68,6 +68,11 @@ export const PageContent = styled.div`
     }
 `;
 
+export const PageContainer = styled.div`
+    padding-top: 155px;
+    flex-grow: 1;
+`;
+
 export const ContentWrapper = styled.div`
     max-width: 1000px;
     margin: 0 auto;
