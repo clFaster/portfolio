@@ -1,7 +1,6 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Homepage from "./pages/Homepage.tsx";
 import About from "./pages/About.tsx";
-import Contact from "./pages/Contact.tsx";
 import Projects from "./pages/Projects.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import {MainLayout} from "./MainLayout.tsx";
@@ -9,27 +8,23 @@ import {MainLayout} from "./MainLayout.tsx";
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <MainLayout />,
+        element: <MainLayout/>,
         children: [
             {
                 path: "/",
-                element: <Homepage />,
+                element: <Homepage/>,
             },
             {
                 path: "/about",
-                element: <About />,
-            },
-            {
-                path: "/contact",
-                element: <Contact />,
+                element: <About/>,
             },
             {
                 path: "/projects",
-                element: <Projects />,
+                element: <Projects/>,
             },
             {
                 path: "*",
-                element: <NotFound />,
+                element: <NotFound/>,
             },
         ],
     },
@@ -37,6 +32,6 @@ const router = createBrowserRouter([
 
 export const App = () => {
     return (
-        <RouterProvider router={router} />
+        <RouterProvider router={router}/>
     );
 };

@@ -69,13 +69,16 @@ export const PageContent = styled.div`
 `;
 
 export const PageContainer = styled.div`
-    padding-top: 155px;
+    padding-top: 120px;
     flex-grow: 1;
 `;
 
 export const ContentWrapper = styled.div`
     max-width: 1000px;
+    min-height: 100vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
     @media (max-width: 1270px) {
         max-width: 90%;
@@ -133,11 +136,14 @@ export const Text = styled.p`
 `;
 
 export const PageFooter = styled.footer`
+    position: relative;
+
     &:before {
         content: '';
         position: absolute;
         left: 0;
         right: 0;
+        top: 0;
         border-top: 2px solid var(--tertiary-color);
     }
 `;

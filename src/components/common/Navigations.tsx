@@ -8,7 +8,11 @@ const Navigations = () => {
     const [isOpen, setIsOpen] = useState(false);
     const location = useLocation();
     const active = location.pathname.split("/")[1] || "home";
-    
+
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    };
+
     return (
         <NavContainer>
             <ToggleButton $isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
@@ -19,16 +23,13 @@ const Navigations = () => {
                 <NavBackground>
                     <NavList>
                         <NavItem $isActive={active === "home"}>
-                            <Link to="/">Home</Link>
+                            <Link to="/" onClick={handleLinkClick}>Home</Link>
                         </NavItem>
                         <NavItem $isActive={active === "about"}>
-                            <Link to="/about">About</Link>
+                            <Link to="/about" onClick={handleLinkClick}>About</Link>
                         </NavItem>
                         <NavItem $isActive={active === "projects"}>
-                            <Link to="/projects">Projects</Link>
-                        </NavItem>
-                        <NavItem $isActive={active === "contact"}>
-                            <Link to="/contact">Contact</Link>
+                            <Link to="/projects" onClick={handleLinkClick}>Projects</Link>
                         </NavItem>
                     </NavList>
                 </NavBackground>

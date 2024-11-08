@@ -75,10 +75,10 @@ export const HomepageImageContainer = styled.div`
     }
 `;
 
-export const HomepageImageWrapper = styled.div<{ rotationAngle: number }>`
+export const HomepageImageWrapper = styled.div<{ rotationangle: number }>`
     overflow: hidden;
     border-radius: 10%;
-    transform: ${({rotationAngle}) => `rotate(${rotationAngle}deg)`};
+    transform: ${({rotationangle}) => `rotate(${rotationangle}deg)`};
     transition: transform 0.3s ease-out; // Adjust transition duration as needed
 `;
 
@@ -96,7 +96,7 @@ export const HomepageAfterTitle = styled.div`
 
 export const HomepageProjects = styled.div`
     flex-basis: 300px;
-    padding-top: 40px;
+    padding-top: 10px;
 
     @media (max-width: 1024px) {
         flex-basis: auto;

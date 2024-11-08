@@ -1,4 +1,3 @@
-// Define interfaces for the data structure
 interface MainInfo {
     title: string;
     name: string;
@@ -61,7 +60,7 @@ const DATA: Data = {
     about: {
         title: "I’m Moritz. I live in Vienna, where I code, create, and occasionally break things (for science!)",
         description:
-            "I've had the chance to work on all sorts of projects, from IT support to software engineering at Infineon and now at SIMStation. Studied software engineering and business management at Technische Universität Graz, so I’ve got a good mix of tech and business. Always excited to collaborate, share ideas, and keep learning!",
+            "I've had the chance to work on all sorts of projects, from IT support to software engineering at Infineon, the Austrian Postal Service and now at SIMStation. Studied software engineering and business management at Technical University Graz, so I’ve got a good mix of tech and business. Always excited to collaborate, share ideas, and keep learning! Dont hesitate to reach out.",
     },
 
     projects: [

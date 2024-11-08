@@ -33,35 +33,6 @@ export const Navbar = styled.nav<{ $isOpen: boolean }>`
     }
 `;
 
-export const NavBackground = styled.div`
-    width: 380px;
-    height: 40px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 40px;
-
-    @media (max-width: 768px) {
-        width: 100%;
-        height: 100vh;
-        background: transparent;
-    }
-`;
-
-export const NavList = styled.ul`
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    align-items: center;
-    margin: 11px 20px 0 -16px;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: flex-start;
-        margin: 20px 0;
-        padding: 50px 0;
-    }
-`;
-
 export const ToggleButton = styled.button<{ $isOpen: boolean }>`
     position: fixed;
     top: 20px;
@@ -79,9 +50,45 @@ export const ToggleButton = styled.button<{ $isOpen: boolean }>`
     }
 `;
 
+export const NavBackground = styled.div`
+    width: 340px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    display: flex;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 100vh;
+        background: transparent;
+    }
+`;
+
+export const NavList = styled.ul`
+    display: flex;
+    padding: 0 15px;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: inherit;
+        margin: 20px 0;
+        padding: 50px 0;
+        gap: 5px;
+    }
+`;
+
 export const NavItem = styled.li<{ $isActive: boolean }>`
     font-weight: bold;
-    font-size: 80%;
+    font-size: 18px;
+    flex-grow: 1;
+    text-align: center;
 
     a {
         text-decoration: none;
@@ -114,5 +121,6 @@ export const NavItem = styled.li<{ $isActive: boolean }>`
         border: 1px solid transparent;
         border-radius: 10px;
         font-size: 25px;
+        flex-grow: 0;
     }
 `;
