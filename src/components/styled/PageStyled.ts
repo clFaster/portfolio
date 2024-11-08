@@ -4,6 +4,7 @@ export const PageContent = styled.div`
     background-color: white;
     position: relative;
     min-height: 100vh;
+    scroll-behavior: smooth;
 
     &:before,
     &:after {
@@ -67,7 +68,6 @@ export const PageContent = styled.div`
     }
 `;
 
-// Use the styled component in your component render
 export const ContentWrapper = styled.div`
     max-width: 1000px;
     margin: 0 auto;
@@ -104,10 +104,23 @@ export const Title = styled.h1`
 export const Subtitle = styled.h2`
     padding-top: 10px;
     color: var(--secondary-color);
-    font-size: 16px;
+    font-size: 24px;
     line-height: 28px;
     width: 70%;
     margin-top: 25px;
+
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+`;
+
+export const Text = styled.p`
+    padding-top: 10px;
+    color: var(--secondary-color);
+    font-size: 16px;
+    line-height: 28px;
+    width: 70%;
+    margin-top: 0;
 
     @media (max-width: 800px) {
         width: 100%;

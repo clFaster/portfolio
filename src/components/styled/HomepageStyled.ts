@@ -1,12 +1,5 @@
 import styled from 'styled-components';
-import {Subtitle, Title} from "./PageStyled.ts";
-
-export const HomepageLogoContainer = styled.div`
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-top: 130px;
-`;
+import {Subtitle, Text, Title} from "./PageStyled.ts";
 
 export const HomepageContainer = styled.div`
     padding-top: 155px;
@@ -45,12 +38,21 @@ export const HomepageTitle = styled(Title)`
     }
 `;
 
-export const HomepageSubtitle = styled(Subtitle)`
+export const HomepageSubTitle = styled(Subtitle)`
     width: 85% !important;
 
     @media (max-width: 1024px) {
         width: 100% !important;
-        margin-top: 10px;
+        margin-top: 20px;
+        order: 2;
+    }
+`;
+
+export const HomepageText = styled(Text)`
+    width: 85% !important;
+
+    @media (max-width: 1024px) {
+        width: 100% !important;
         order: 3;
     }
 `;
@@ -77,32 +79,15 @@ export const HomepageImageContainer = styled.div`
     }
 `;
 
-export const HomepageImageWrapper = styled.div`
+export const HomepageImageWrapper = styled.div<{ rotationAngle: number }>`
     overflow: hidden;
     border-radius: 10%;
-    transform: rotate(3deg);
+    transform: ${({rotationAngle}) => `rotate(${rotationAngle}deg)`};
+    transition: transform 0.3s ease-out; // Adjust transition duration as needed
 `;
 
 export const HomepageImage = styled.img`
     width: 100%;
-`;
-
-export const HomepageSocials = styled.div`
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-top: 30px;
-`;
-
-export const HomepageSocialIcon = styled.div`
-    padding-right: 20px;
-    font-size: 25px;
-    transition: color 0.2s ease-in-out;
-    color: var(--secondary-color);
-
-    &:hover {
-        color: var(--primary-color);
-    }
 `;
 
 export const HomepageAfterTitle = styled.div`
@@ -120,20 +105,6 @@ export const HomepageProjects = styled.div`
     @media (max-width: 1024px) {
         flex-basis: auto;
     }
-`;
-
-export const HomepageArticles = styled.div`
-    flex-basis: 900px;
-    padding-top: 30px;
-    margin-left: -30px;
-
-    @media (max-width: 1024px) {
-        flex-basis: auto;
-    }
-`;
-
-export const HomepageArticle = styled.div`
-    padding-bottom: 5px;
 `;
 
 export const HomepageWorks = styled.div`
