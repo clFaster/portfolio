@@ -1,110 +1,110 @@
 interface MainInfo {
-    title: string;
-    name: string;
-    email: string;
-    logo: string;
+  title: string;
+  name: string;
+  email: string;
+  logo: string;
 }
 
 interface Socials {
-    github: string;
-    linkedin: string;
-    stackoverflow: string;
+  github: string;
+  linkedin: string;
+  stackoverflow: string;
 }
 
 interface Homepage {
-    title: string;
-    description: string;
+  title: string;
+  description: string;
 }
 
 interface About {
-    title: string;
-    description: string;
+  title: string;
+  description: string;
 }
 
 interface Project {
-    title: string;
-    description: string;
-    logo: string;
-    linkText: string;
-    link: string;
+  title: string;
+  description: string;
+  logo: string;
+  linkText: string;
+  link: string;
 }
 
 interface Data {
-    main: MainInfo;
-    socials: Socials;
-    homepage: Homepage;
-    about: About;
-    projects: Project[];
+  main: MainInfo;
+  socials: Socials;
+  homepage: Homepage;
+  about: About;
+  projects: Project[];
 }
 
 const DATA: Data = {
-    main: {
-        title: "Moritz Reis | Software Engineer Portfolio",
-        name: "Moritz R.",
-        email: "me@moritzreis.dev",
-        logo: "../logo-compressed.png",
-    },
+  main: {
+    title: "Moritz Reis | Software Engineer Portfolio",
+    name: "Moritz R.",
+    email: "me@moritzreis.dev",
+    logo: "../logo-compressed.png",
+  },
 
-    socials: {
-        github: "https://github.com/clFaster",
-        linkedin: "https://www.linkedin.com/in/moritzreis/",
-        stackoverflow: "https://stackoverflow.com/users/8307815"
-    },
+  socials: {
+    github: "https://github.com/clFaster",
+    linkedin: "https://www.linkedin.com/in/moritzreis/",
+    stackoverflow: "https://stackoverflow.com/users/8307815",
+  },
 
-    homepage: {
-        title: "Full-stack Software Engineer and Code Enthusiast",
-        description:
-            "Hey there! I'm a software engineer with a love for ASP.NET, C# and much more. Currently crafting cool things at SIMStation in Vienna. I enjoy solving puzzles through code, learning new tricks, and always aim to build stuff that's scalable, secure, and just plain awesome. Let's make tech fun!",
-    },
+  homepage: {
+    title: "Full-stack Software Engineer and Code Enthusiast",
+    description:
+      "Hey there! I'm a software engineer with a love for ASP.NET, C# and much more. Currently crafting cool things at SIMStation in Vienna. I enjoy solving puzzles through code, learning new tricks, and always aim to build stuff that's scalable, secure, and just plain awesome. Let's make tech fun!",
+  },
 
-    about: {
-        title: "I’m Moritz. I live in Vienna, where I code, create, and occasionally break things (for science!)",
-        description:
-            "I've had the chance to work on all sorts of projects, from IT support to software engineering at Infineon, the Austrian Postal Service and now at SIMStation. Studied software engineering and business management at Technical University Graz, so I’ve got a good mix of tech and business. Always excited to collaborate, share ideas, and keep learning! Dont hesitate to reach out.",
-    },
+  about: {
+    title:
+      "I’m Moritz. I live in Vienna, where I code, create, and occasionally break things (for science!)",
+    description:
+      "I've had the chance to work on all sorts of projects, from IT support to software engineering at Infineon, the Austrian Postal Service and now at SIMStation. Studied software engineering and business management at Technical University Graz, so I’ve got a good mix of tech and business. Always excited to collaborate, share ideas, and keep learning! Dont hesitate to reach out.",
+  },
 
-    projects: [
-        {
-            title: "TapToQR",
-            description:
-                "Browser Extension to instantly generate and share a QR code for the webpage you're currently viewing, making link sharing seamless and quick.",
-            logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-            linkText: "View Project",
-            link: "https://github.com/clFaster/TapToQR",
-        },
-        {
-            title: "StatusSwift",
-            description:
-                "StatusSwift keeps your status in chat applications like Discord and Microsoft Teams set to 'available', preventing automatic changes to 'away' due to inactivity.",
-            logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/csharp/csharp.png",
-            linkText: "View Project",
-            link: "https://github.com/clFaster/StatusSwift",
-        },
-        {
-            title: "SVNPathCopy",
-            description:
-                "Windows Context Menu extension - lets you copy SVN path with revision number.",
-            logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/csharp/csharp.png",
-            linkText: "View Project",
-            link: "https://github.com/clFaster/SVNPathCopy",
-        },
-        {
-            title: "Badge-Generator",
-            description:
-                "Python script to generate Event Badges.",
-            logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
-            linkText: "View Project",
-            link: "https://github.com/clFaster/Badge-Generator",
-        },
-        {
-            title: "AutoGeneratedApi",
-            description:
-                "The project's objective is to streamline the integration of a React application with a .NET API. ",
-            logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png",
-            linkText: "View Project",
-            link: "https://github.com/clFaster/AutoGeneratedApi",
-        },
-    ],
+  projects: [
+    {
+      title: "TapToQR",
+      description:
+        "Browser Extension to instantly generate and share a QR code for the webpage you're currently viewing, making link sharing seamless and quick.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+      linkText: "View Project",
+      link: "https://github.com/clFaster/TapToQR",
+    },
+    {
+      title: "StatusSwift",
+      description:
+        "StatusSwift keeps your status in chat applications like Discord and Microsoft Teams set to 'available', preventing automatic changes to 'away' due to inactivity.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/csharp/csharp.png",
+      linkText: "View Project",
+      link: "https://github.com/clFaster/StatusSwift",
+    },
+    {
+      title: "SVNPathCopy",
+      description:
+        "Windows Context Menu extension - lets you copy SVN path with revision number.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/csharp/csharp.png",
+      linkText: "View Project",
+      link: "https://github.com/clFaster/SVNPathCopy",
+    },
+    {
+      title: "Badge-Generator",
+      description: "Python script to generate Event Badges.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+      linkText: "View Project",
+      link: "https://github.com/clFaster/Badge-Generator",
+    },
+    {
+      title: "AutoGeneratedApi",
+      description:
+        "The project's objective is to streamline the integration of a React application with a .NET API. ",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png",
+      linkText: "View Project",
+      link: "https://github.com/clFaster/AutoGeneratedApi",
+    },
+  ],
 };
 
 export default DATA;
