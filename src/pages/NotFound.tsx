@@ -1,11 +1,11 @@
-import {Title} from "../components/styled/PageStyled.ts";
+import { Title } from "../components/styled/PageStyled.ts";
 
 function NotFound() {
-    return (
-        <>
-            <Title>Not Found</Title>
-        </>
-    );
+  return (
+    <>
+      <Title>Not Found</Title>
+    </>
+  );
 }
 
 export default NotFound;
