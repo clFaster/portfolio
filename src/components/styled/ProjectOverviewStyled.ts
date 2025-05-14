@@ -47,7 +47,7 @@ export const ProjectStyled = styled.div`
     transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
     &:hover {
-        background: #fafafa;
+        background: var(--card-background);
         opacity: 1;
     }
 

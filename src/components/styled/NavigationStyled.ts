@@ -26,8 +26,8 @@ export const Navbar = styled.nav<{ $isOpen: boolean }>`
         right: 0;
         height: 100vh;
         width: 100%;
-        background-color: #fff;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: var(--background-color);
+        box-shadow: 0 2px 10px var(--shadow-color);
         transform: ${({$isOpen}) => ($isOpen ? "translateX(0)" : "translateX(100%)")};
         transition: transform 0.3s ease-in-out;
     }
@@ -42,7 +42,8 @@ export const ToggleButton = styled.button<{ $isOpen: boolean }>`
     border: none;
     cursor: pointer;
     transition: transform 0.3s ease;
-
+    color: var(--primary-color);
+    
     transform: ${({$isOpen}) => ($isOpen ? 'rotate(90deg)' : 'rotate(0deg)')};
 
     @media (min-width: 769px) {
@@ -53,8 +54,8 @@ export const ToggleButton = styled.button<{ $isOpen: boolean }>`
 export const NavBackground = styled.div`
     width: 340px;
     height: 50px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: var(--background-color);
+    box-shadow: 0 2px 10px var(--shadow-color);
     border-radius: 40px;
     display: flex;
 

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PageContent = styled.div`
-    background-color: white;
+    background-color: var(--background-color);
     position: relative;
     min-height: 100vh;
     scroll-behavior: smooth;
@@ -13,8 +13,8 @@ export const PageContent = styled.div`
         top: 0;
         bottom: 0;
         width: calc((100% - 1200px) / 2);
-        background-color: #fafafa;
-        border: 1px solid #f4f4f5;
+        background-color: var(--card-background);
+        border: 1px solid var(--border-color);
     }
 
     &:before {
