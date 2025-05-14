@@ -3,6 +3,7 @@ import {NavBackground, Navbar, NavContainer, NavItem, NavList, ToggleButton} fro
 import {useState} from "react";
 import {faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigations = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -30,6 +31,9 @@ const Navigations = () => {
                         </NavItem>
                         <NavItem $isActive={active === "projects"}>
                             <Link to="/projects" onClick={handleLinkClick}>Projects</Link>
+                        </NavItem>
+                        <NavItem $isActive={false}>
+                            <ThemeToggle />
                         </NavItem>
                     </NavList>
                 </NavBackground>
