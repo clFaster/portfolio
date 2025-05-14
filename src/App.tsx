@@ -4,6 +4,7 @@ import About from "./pages/About.tsx";
 import Projects from "./pages/Projects.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import {MainLayout} from "./MainLayout.tsx";
+import { ThemeProvider } from "./context/ThemeContext.tsx";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,8 @@ const router = createBrowserRouter([
 
 export const App = () => {
     return (
-        <RouterProvider router={router}/>
+        <ThemeProvider>
+            <RouterProvider router={router}/>
+        </ThemeProvider>
     );
 };
