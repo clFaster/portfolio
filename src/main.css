@@ -2,33 +2,33 @@
 @import "./data/styles.css";
 
 body {
-    margin: 0;
-    font-family: var(--primary-font), sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: var(--background-color);
-    color: var(--primary-color);
-    transition: var(--theme-transition);
+  margin: 0;
+  font-family: var(--primary-font), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  transition: var(--theme-transition);
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--quaternary-color);
+  background-color: var(--quaternary-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--secondary-color);
-    border-radius: 5px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
