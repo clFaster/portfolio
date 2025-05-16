@@ -66,6 +66,9 @@ export const HomepageFirstAreaRightSide = styled.div`
 export const HomepageImageContainer = styled.div`
     width: 370px;
     height: 370px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 1024px) {
         padding-top: 50px;
@@ -76,14 +79,20 @@ export const HomepageImageContainer = styled.div`
 `;
 
 export const HomepageImageWrapper = styled.div<{ rotationangle: number }>`
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    border-radius: 10%;
+    border-radius: 40px;
     transform: ${({rotationangle}) => `rotate(${rotationangle}deg)`};
-    transition: transform 0.3s ease-out; // Adjust transition duration as needed
+    transition: transform 0.3s ease-out;
+    position: relative;
 `;
 
 export const HomepageImage = styled.img`
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
 `;
 
 export const HomepageAfterTitle = styled.div`
