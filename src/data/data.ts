@@ -2,7 +2,6 @@ interface MainInfo {
     title: string;
     name: string;
     email: string;
-    logo: string;
 }
 
 interface Socials {
@@ -41,8 +40,7 @@ const DATA: Data = {
     main: {
         title: "Moritz Reis | Software Engineer Portfolio",
         name: "Moritz R.",
-        email: "me@moritzreis.dev",
-        logo: "../logo-compressed.png",
+        email: "me@moritzreis.dev"
     },
 
     socials: {

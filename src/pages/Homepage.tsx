@@ -58,7 +58,7 @@ function Homepage() {
                 <HomepageFirstAreaRightSide>
                     <HomepageImageContainer>
                         <HomepageImageWrapper rotationangle={rotationAngle}>
-                            <HomepageImage src="../logo.png" alt="Homepage Image"/>
+                            <HomepageImage src="../mre-styled-portrait.svg" alt="Homepage Image"/>
                         </HomepageImageWrapper>
                     </HomepageImageContainer>
                 </HomepageFirstAreaRightSide>

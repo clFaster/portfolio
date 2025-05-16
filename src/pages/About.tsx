@@ -56,7 +56,7 @@ function About() {
                 <HomepageFirstAreaRightSide>
                     <HomepageImageContainer>
                         <HomepageImageWrapper rotationangle={rotationAngle}>
-                            <HomepageImage src="../logo.png" alt="Homepage Image"/>
+                            <HomepageImage src="../mre-portrait.png" alt="Drawing of Moritz Reis"/>
                         </HomepageImageWrapper>
                     </HomepageImageContainer>
                 </HomepageFirstAreaRightSide>
