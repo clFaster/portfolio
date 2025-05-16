@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import {
+  MobileNavFooter,
   NavBackground,
   Navbar,
   NavContainer,
@@ -42,8 +43,8 @@ const Navigations = () => {
     // Close mobile menu
     setIsOpen(false);
   };
-
-  return (    <NavContainer>
+  return (    
+  <NavContainer>
       <ToggleButton $isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x" />
       </ToggleButton>
@@ -66,10 +67,14 @@ const Navigations = () => {
                 Projects
               </Link>
             </NavItem>
-            <NavItem $isActive={false}>
+            {/* Theme toggle for desktop */}
+            <NavItem $isActive={false} className="theme-toggle-item desktop-only">
               <ThemeToggle />
             </NavItem>
           </NavList>
+          <MobileNavFooter className="theme-toggle-mobile">
+            <ThemeToggle />
+          </MobileNavFooter>
         </NavBackground>
       </Navbar>
     </NavContainer>

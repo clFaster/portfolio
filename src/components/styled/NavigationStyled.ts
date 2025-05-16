@@ -8,6 +8,27 @@ export const NavContainer = styled.div`
 
   @media (max-width: 768px) {
     display: block;
+    position: relative;
+  }
+`;
+
+export const MobileNavFooter = styled.div`
+  display: none;
+  
+  @media (max-width: 768px) {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: auto;
+    border-top: 1px solid var(--quaternary-color);
+    background-color: var(--background-color);
+    justify-content: center;
+  }
+
+  @media (min-width: 769px) {
+    display: none;
   }
 `;
 
@@ -124,5 +145,66 @@ export const NavItem = styled.li<{ $isActive: boolean }>`
     border-radius: 10px;
     font-size: 25px;
     flex-grow: 0;
+    
+    &.theme-toggle-item {
+      button {
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+      }
+    }
+    
+    &.desktop-only {
+      display: none;
+    }
+  }
+`;
+
+export const ToggleContainer = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: var(--theme-transition);
+  color: var(--primary-color);
+
+  &:hover {
+    background-color: var(--quaternary-color);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    justify-content: flex-start;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    font-size: 18px;
+
+    &:hover {
+      background-color: var(--quaternary-color);
+    }
+
+    svg {
+      margin-right: 0.5rem;
+      width: 24px;
+      height: 24px;
+    }
+  }
+`;
+
+export const ThemeLabel = styled.span`
+  display: none;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+
+  @media (max-width: 768px) {
+    display: inline;
+    font-size: 25px;
   }
 `;
