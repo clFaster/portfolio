@@ -6,8 +6,6 @@ export const AllProjectsContainer = styled.div`
   flex-wrap: wrap;
   align-items: stretch;
   padding-bottom: 30px;
-  margin-left: -35px;
-  margin-right: -35px;
 `;
 
 export const AllProjectsProject = styled.div`
