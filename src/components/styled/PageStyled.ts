@@ -136,7 +136,14 @@ export const Text = styled.p`
 `;
 
 export const PageFooter = styled.footer`
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  z-index: 100;
+  background: var(--background-color);
+  box-shadow: 0 -2px 10px var(--shadow-color);
 
   &:before {
     content: "";
