@@ -5,7 +5,7 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   @keyframes navFadeIn {
     from {
       opacity: 0;
@@ -16,7 +16,7 @@ export const NavContainer = styled.div`
       transform: translateY(0);
     }
   }
-  
+
   animation: navFadeIn 0.6s ease-out;
 
   @media (max-width: 768px) {
@@ -66,15 +66,16 @@ export const Navbar = styled.nav<{ $isOpen: boolean }>`
     height: 100vh;
     width: 100%;
     backdrop-filter: ${({ $isOpen }) => ($isOpen ? "blur(10px)" : "none")};
-    background-color: ${({ $isOpen }) => 
+    background-color: ${({ $isOpen }) =>
       $isOpen ? "var(--background-color)" : "transparent"};
     box-shadow: ${({ $isOpen }) =>
       $isOpen ? "0 0 20px var(--shadow-color)" : "none"};
     transform: ${({ $isOpen }) =>
       $isOpen ? "translateX(0)" : "translateX(100%)"};
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-                box-shadow 0.4s ease-in-out,
-                backdrop-filter 0.4s ease-in-out;
+    transition:
+      transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+      box-shadow 0.4s ease-in-out,
+      backdrop-filter 0.4s ease-in-out;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -96,7 +97,8 @@ export const ToggleButton = styled.button<{ $isOpen: boolean }>`
   border: none;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  color: ${({ $isOpen }) => ($isOpen ? "var(--link-color)" : "var(--primary-color)")};
+  color: ${({ $isOpen }) =>
+    $isOpen ? "var(--link-color)" : "var(--primary-color)"};
   padding: ${({ $isOpen }) => ($isOpen ? "10px" : "10px 12px")};
   border-radius: 50%;
   box-shadow: ${({ $isOpen }) =>
@@ -131,7 +133,7 @@ export const NavBackground = styled.div`
   display: flex;
   align-items: center;
   transition: box-shadow 0.3s ease;
-  
+
   &:hover {
     box-shadow: 0 5px 20px var(--shadow-color);
   }
@@ -145,7 +147,7 @@ export const NavBackground = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    
+
     &:hover {
       box-shadow: none;
     }
@@ -197,7 +199,7 @@ export const NavItem = styled.li<{ $isActive: boolean }>`
 
   /* Active state indicator - desktop */
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 50%;
@@ -242,7 +244,7 @@ export const NavItem = styled.li<{ $isActive: boolean }>`
     flex-grow: 0;
     text-align: left;
     transition: all 0.3s ease;
-    
+
     &::after {
       display: none;
     }
@@ -256,9 +258,10 @@ export const NavItem = styled.li<{ $isActive: boolean }>`
         background-color: var(--quaternary-color);
         color: var(--primary-color);
       }
-    }    &.theme-toggle-item {
+    }
+    &.theme-toggle-item {
       display: none; /* Hide the theme toggle in the navbar on mobile */
-      
+
       button {
         width: 100%;
         text-align: left;
@@ -286,9 +289,9 @@ export const ToggleThemeButton = styled.button`
   color: var(--primary-color);
   position: relative;
   overflow: hidden;
-  
+
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -298,13 +301,15 @@ export const ToggleThemeButton = styled.button`
     border-radius: 50%;
     transform: scale(0);
     opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
     z-index: -1;
   }
 
   &:hover {
     color: var(--link-color);
-    
+
     &:before {
       transform: scale(1);
       opacity: 1;
@@ -317,12 +322,11 @@ export const ToggleThemeButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     svg {
       width: 22px;
       height: 22px;
     }
-  
   }
 
   @media (max-width: 768px) {
@@ -334,7 +338,7 @@ export const ToggleThemeButton = styled.button`
     font-size: 18px;
     background-color: var(--card-background);
     transition: all 0.3s ease;
-    
+
     &:before {
       border-radius: 30px;
     }
