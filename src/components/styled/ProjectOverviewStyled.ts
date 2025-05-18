@@ -7,7 +7,7 @@ export const AllProjectsContainer = styled.div`
   align-items: stretch;
   padding-bottom: 50px;
   margin: 0 -15px;
-  
+
   @media (max-width: 680px) {
     margin: 0;
   }
@@ -43,9 +43,9 @@ export const ProjectLinkContainer = styled.div`
   padding-top: 15px;
   margin-top: auto;
   position: relative;
-  
+
   &:before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 5px;
@@ -106,13 +106,13 @@ export const ProjectLogo = styled.div`
   border-radius: 10px;
   padding: 8px;
   transition: transform 0.3s ease;
-  
+
   img {
     width: 100%;
     height: auto;
     object-fit: contain;
   }
-  
+
   ${ProjectStyled}:hover & {
     transform: scale(1.05);
   }
@@ -126,9 +126,9 @@ export const ProjectTitle = styled.h2`
   margin-bottom: 1em;
   font-weight: 700;
   position: relative;
-  
+
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -137,7 +137,7 @@ export const ProjectTitle = styled.h2`
     background-color: var(--link-color);
     transition: width 0.3s ease-in-out;
   }
-  
+
   ${ProjectStyled}:hover &:after {
     width: 60px;
   }
@@ -158,7 +158,7 @@ export const ProjectDescription = styled.p`
 export const ProjectLinkIcon = styled(FontAwesomeIcon)`
   font-size: 13px;
   transition: transform 0.3s ease;
-  
+
   ${ProjectStyled}:hover & {
     transform: translateX(2px);
   }
@@ -169,7 +169,7 @@ export const ProjectLinkText = styled.span`
   font-weight: 700;
   position: relative;
   transition: padding-left 0.3s ease;
-  
+
   ${ProjectStyled}:hover & {
     padding-left: 12px;
   }
