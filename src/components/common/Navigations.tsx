@@ -8,7 +8,7 @@ import {
   NavList,
   ToggleButton,
 } from "../styled/NavigationStyled";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ThemeToggle from "./ThemeToggle";
@@ -28,21 +28,24 @@ const Navigations = () => {
   const { setDirection } = useAnimation();
 
   // Helper to determine which way to animate when navigating
-  const handleNavigate = (targetPage: string) => {
-    const currentIndex = navOrder[active as keyof typeof navOrder] || 0;
-    const targetIndex = navOrder[targetPage as keyof typeof navOrder] || 0;
+  const handleNavigate = useCallback(
+    (targetPage: string) => {
+      const currentIndex = navOrder[active as keyof typeof navOrder] || 0;
+      const targetIndex = navOrder[targetPage as keyof typeof navOrder] || 0;
 
-    if (targetIndex > currentIndex) {
-      setDirection("right");
-    } else if (targetIndex < currentIndex) {
-      setDirection("left");
-    } else {
-      setDirection(null);
-    }
+      if (targetIndex > currentIndex) {
+        setDirection("right");
+      } else if (targetIndex < currentIndex) {
+        setDirection("left");
+      } else {
+        setDirection(null);
+      }
 
-    // Close mobile menu
-    setIsOpen(false);
-  };
+      // Close mobile menu
+      setIsOpen(false);
+    },
+    [active, setDirection, setIsOpen]
+  );
   return (
     <NavContainer>
       <ToggleButton $isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
