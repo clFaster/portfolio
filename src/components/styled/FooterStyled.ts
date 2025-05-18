@@ -9,7 +9,7 @@ export const FooterContainer = styled.div`
 
     @media (max-width: 600px) {
         flex-direction: column;
-        height: 85px;
+        height: 55px;
     }
 `;
 

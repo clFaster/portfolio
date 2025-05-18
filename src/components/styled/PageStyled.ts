@@ -71,6 +71,13 @@ export const PageContent = styled.div`
 export const PageContainer = styled.div`
   padding-top: 120px;
   flex-grow: 1;
+  padding-bottom: 100px;
+
+  @media (max-width: 800px) {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+
 `;
 
 export const ContentWrapper = styled.div`
@@ -145,6 +152,9 @@ export const PageFooter = styled.footer`
   background: var(--background-color);
   box-shadow: 0 -2px 10px var(--shadow-color);
 
+  width: 100%;
+  max-width: 1000px;
+
   &:before {
     content: "";
     position: absolute;
@@ -152,5 +162,19 @@ export const PageFooter = styled.footer`
     right: 0;
     top: 0;
     border-top: 2px solid var(--tertiary-color);
+  }
+
+  @media (max-width: 1270px) {
+    width: 85%;
+    max-width: 950px;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 850px;
+  }
+
+  @media (max-width: 800px) {
+    position: relative;
+    width: 100%;
   }
 `;
