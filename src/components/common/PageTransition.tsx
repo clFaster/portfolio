@@ -40,8 +40,8 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
       animate="animate"
       exit="exit"
       custom={direction}
-      style={{ 
-        width: "100%"
+      style={{
+        width: "100%",
       }}
     >
       {children}

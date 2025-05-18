@@ -77,7 +77,6 @@ export const PageContainer = styled.div`
     padding-top: 70px;
     padding-bottom: 0px;
   }
-
 `;
 
 export const ContentWrapper = styled.div`

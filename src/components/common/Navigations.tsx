@@ -16,9 +16,9 @@ import useAnimation from "../../context/useAnimation";
 
 // Navigation order to determine direction
 const navOrder = {
-  "home": 0,
-  "about": 1,
-  "projects": 2,
+  home: 0,
+  about: 1,
+  projects: 2,
 };
 
 const Navigations = () => {
@@ -26,12 +26,12 @@ const Navigations = () => {
   const location = useLocation();
   const active = location.pathname.split("/")[1] || "home";
   const { setDirection } = useAnimation();
-  
+
   // Helper to determine which way to animate when navigating
   const handleNavigate = (targetPage: string) => {
     const currentIndex = navOrder[active as keyof typeof navOrder] || 0;
     const targetIndex = navOrder[targetPage as keyof typeof navOrder] || 0;
-    
+
     if (targetIndex > currentIndex) {
       setDirection("right");
     } else if (targetIndex < currentIndex) {
@@ -39,12 +39,12 @@ const Navigations = () => {
     } else {
       setDirection(null);
     }
-    
+
     // Close mobile menu
     setIsOpen(false);
   };
-  return (    
-  <NavContainer>
+  return (
+    <NavContainer>
       <ToggleButton $isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x" />
       </ToggleButton>
@@ -68,7 +68,10 @@ const Navigations = () => {
               </Link>
             </NavItem>
             {/* Theme toggle for desktop */}
-            <NavItem $isActive={false} className="theme-toggle-item desktop-only">
+            <NavItem
+              $isActive={false}
+              className="theme-toggle-item desktop-only"
+            >
               <ThemeToggle />
             </NavItem>
           </NavList>

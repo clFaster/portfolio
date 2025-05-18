@@ -14,7 +14,7 @@ export const NavContainer = styled.div`
 
 export const MobileNavFooter = styled.div`
   display: none;
-  
+
   @media (max-width: 768px) {
     display: flex;
     position: absolute;
@@ -145,7 +145,7 @@ export const NavItem = styled.li<{ $isActive: boolean }>`
     border-radius: 10px;
     font-size: 25px;
     flex-grow: 0;
-    
+
     &.theme-toggle-item {
       button {
         width: 100%;
@@ -154,7 +154,7 @@ export const NavItem = styled.li<{ $isActive: boolean }>`
         align-items: center;
       }
     }
-    
+
     &.desktop-only {
       display: none;
     }
