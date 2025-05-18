@@ -5,9 +5,11 @@ export const HomepageFirstArea = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 15px;
 
   @media (max-width: 1024px) {
     flex-direction: column;
+    padding-right: 0px;
   }
 `;
 
