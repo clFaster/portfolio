@@ -41,9 +41,7 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
       exit="exit"
       custom={direction}
       style={{ 
-        width: "100%", 
-        height: "100%", 
-        position: "absolute"
+        width: "100%"
       }}
     >
       {children}
