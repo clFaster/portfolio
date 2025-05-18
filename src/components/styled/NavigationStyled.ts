@@ -49,11 +49,13 @@ export const Navbar = styled.nav<{ $isOpen: boolean }>`
     height: 100vh;
     width: 100%;
     background-color: var(--background-color);
-    box-shadow: ${({ $isOpen }) => 
+    box-shadow: ${({ $isOpen }) =>
       $isOpen ? "0 0 15px var(--shadow-color)" : "none"};
     transform: ${({ $isOpen }) =>
       $isOpen ? "translateX(0)" : "translateX(100%)"};
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition:
+      transform 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -65,7 +67,7 @@ export const ToggleButton = styled.button<{ $isOpen: boolean }>`
   top: 20px;
   right: 20px;
   z-index: 1000;
-  background-color: ${({ $isOpen }) => 
+  background-color: ${({ $isOpen }) =>
     $isOpen ? "transparent" : "var(--background-color)"};
   border: none;
   cursor: pointer;
@@ -73,14 +75,14 @@ export const ToggleButton = styled.button<{ $isOpen: boolean }>`
   color: var(--primary-color);
   padding: ${({ $isOpen }) => ($isOpen ? "10px" : "10px 12px")};
   border-radius: 50%;
-  box-shadow: ${({ $isOpen }) => 
+  box-shadow: ${({ $isOpen }) =>
     $isOpen ? "none" : "0 2px 10px var(--shadow-color)"};
-  
+
   transform: ${({ $isOpen }) => ($isOpen ? "rotate(90deg)" : "rotate(0deg)")};
 
   &:hover {
     color: var(--link-color);
-    transform: ${({ $isOpen }) => 
+    transform: ${({ $isOpen }) =>
       $isOpen ? "rotate(90deg) scale(1.1)" : "rotate(0deg) scale(1.1)"};
   }
 
@@ -178,7 +180,7 @@ export const NavItem = styled.li<{ $isActive: boolean }>`
       padding: 12px 20px;
       border-radius: 12px;
       transition: all 0.2s ease;
-      
+
       &:hover {
         background-color: var(--quaternary-color);
         color: var(--primary-color);
