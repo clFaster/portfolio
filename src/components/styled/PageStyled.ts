@@ -149,7 +149,7 @@ export const PageFooter = styled.footer`
   margin: 0 auto;
   z-index: 100;
   background: var(--background-color);
-  box-shadow: 0 -2px 10px var(--shadow-color);
+  box-shadow: 0 -4px 6px -4px var(--shadow-color);
 
   width: 100%;
   max-width: 1000px;
