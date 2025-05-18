@@ -72,10 +72,7 @@ const Navigations = () => {
               </Link>
             </NavItem>
             {/* Theme toggle for desktop */}
-            <NavItem
-              $isActive={false}
-              className="theme-toggle-item desktop-only"
-            >
+            <NavItem $isActive={false} className="theme-toggle-item">
               <ThemeToggle />
             </NavItem>
           </NavList>

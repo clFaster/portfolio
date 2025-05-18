@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { ThemeContext } from "../../context/ThemeContext";
-import { ThemeLabel, ToggleContainer } from "../styled/NavigationStyled";
+import { ThemeLabel, ToggleThemeButton } from "../styled/NavigationStyled";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <ToggleContainer
+    <ToggleThemeButton
       onClick={toggleTheme}
       title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
     >
@@ -46,7 +46,7 @@ const ThemeToggle = () => {
           <ThemeLabel>Switch to Light Mode</ThemeLabel>
         </>
       )}
-    </ToggleContainer>
+    </ToggleThemeButton>
   );
 };
 
