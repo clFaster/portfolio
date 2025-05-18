@@ -34,28 +34,26 @@ export const MainLayout = () => {
     };
     
     return (
-        <>
-            <PageContent>
-                <Navigations/>
-                <ContentWrapper>
-                    <PageContainer style={containerStyle as React.CSSProperties}>
-                        {isMobile ? (
-                            /* On mobile, render without animation wrapper */
-                            <Outlet/>
-                        ) : (
-                            /* On desktop, use animations */
-                            <AnimatePresence mode="wait" initial={false}>
-                                <PageTransition key={location.pathname}>
-                                    <Outlet/>
-                                </PageTransition>
-                            </AnimatePresence>
-                        )}
-                    </PageContainer>
-                    <PageFooter>
-                        <Footer/>
-                    </PageFooter>
-                </ContentWrapper>
-            </PageContent>
-        </>
+        <PageContent>
+            <Navigations/>
+            <ContentWrapper>
+                <PageContainer style={containerStyle as React.CSSProperties}>
+                    {isMobile ? (
+                        /* On mobile, render without animation wrapper */
+                        <Outlet/>
+                    ) : (
+                        /* On desktop, use animations */
+                        <AnimatePresence mode="wait" initial={false}>
+                            <PageTransition key={location.pathname}>
+                                <Outlet/>
+                            </PageTransition>
+                        </AnimatePresence>
+                    )}
+                </PageContainer>
+                <PageFooter>
+                    <Footer/>
+                </PageFooter>
+            </ContentWrapper>
+        </PageContent>
     );
 };
