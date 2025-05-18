@@ -44,7 +44,7 @@ const Navigations = () => {
       // Close mobile menu
       setIsOpen(false);
     },
-    [active, setDirection, setIsOpen]
+    [active, setDirection, setIsOpen],
   );
   return (
     <NavContainer>
