@@ -30,6 +30,7 @@ const Navigations = () => {
   // Helper to determine which way to animate when navigating
   const handleNavigate = useCallback(
     (targetPage: string) => {
+      if (targetPage === active) return;
       const currentIndex = navOrder[active as keyof typeof navOrder] || 0;
       const targetIndex = navOrder[targetPage as keyof typeof navOrder] || 0;
 
