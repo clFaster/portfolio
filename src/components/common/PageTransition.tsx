@@ -8,8 +8,8 @@ interface PageTransitionProps {
 
 export const PageTransition = ({ children }: PageTransitionProps) => {
   const { direction } = useAnimation();
-  
   const variants = {
+    // Slide In
     initial: (direction: "left" | "right" | null) => ({
       x: direction === "right" ? "100%" : direction === "left" ? "-100%" : 0,
       opacity: 0,
@@ -22,8 +22,9 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
         opacity: { duration: 0.2 },
       },
     },
+    // Slide Out - opposite direction
     exit: (direction: "left" | "right" | null) => ({
-      x: direction === "right" ? "-100%" : direction === "left" ? "100%" : 0,
+      x: direction === "left" ? "100%" : direction === "right" ? "-100%" : 0,
       opacity: 0,
       transition: {
         x: { type: "spring", stiffness: 300, damping: 30 },
