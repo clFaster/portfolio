@@ -5,6 +5,7 @@ import Projects from "./pages/Projects.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import { MainLayout } from "./MainLayout.tsx";
 import { ThemeProvider } from "./context/ThemeContext.tsx";
+import { AnimationProvider } from "./context/AnimationContext.tsx";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,9 @@ const router = createBrowserRouter([
 export const App = () => {
   return (
     <ThemeProvider>
-      <RouterProvider router={router} />
+      <AnimationProvider>
+        <RouterProvider router={router} />
+      </AnimationProvider>
     </ThemeProvider>
   );
 };
