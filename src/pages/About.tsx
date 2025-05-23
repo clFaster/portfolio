@@ -3,20 +3,15 @@ import {
   HomepageFirstArea,
   HomepageFirstAreaLeftSide,
   HomepageFirstAreaRightSide,
-  HomepageImage,
-  HomepageImageContainer,
-  HomepageImageWrapper,
   HomepageText,
   HomepageTitle,
 } from "../components/styled/HomepageStyled.ts";
-import SEO from "../data/seo.ts";
 import { useEffect, useState } from "react";
 import { SocialContacts } from "../components/common/SocialContacts.tsx";
-import { Helmet } from "react-helmet-async";
+import SEOHelmet from "../components/common/SEOHelmet.tsx";
+import ProfileImage from "../components/common/ProfileImage.tsx";
 
 function About() {
-  const helmet = SEO.find((item) => item.page === "about") || SEO[0];
-
   const [rotationAngle, setRotationAngle] = useState(5);
 
   useEffect(() => {
@@ -33,11 +28,7 @@ function About() {
 
   return (
     <>
-      <Helmet>
-        <title>{DATA.main.title}</title>
-        <meta name="description" content={helmet.description} />
-        <meta name="keywords" content={helmet.keywords.join(", ")} />
-      </Helmet>
+      <SEOHelmet pageName="about" />
 
       <HomepageFirstArea>
         <HomepageFirstAreaLeftSide>
@@ -46,14 +37,11 @@ function About() {
         </HomepageFirstAreaLeftSide>
 
         <HomepageFirstAreaRightSide>
-          <HomepageImageContainer>
-            <HomepageImageWrapper $rotationangle={rotationAngle}>
-              <HomepageImage
-                src="../mre-portrait.png"
-                alt="Drawing of Moritz Reis"
-              />
-            </HomepageImageWrapper>
-          </HomepageImageContainer>
+          <ProfileImage 
+            imageSrc="../mre-portrait.png"
+            imageAlt="Drawing of Moritz Reis"
+            rotationAngle={rotationAngle}
+          />
         </HomepageFirstAreaRightSide>
       </HomepageFirstArea>
 

@@ -3,9 +3,6 @@ import {
   HomepageFirstArea,
   HomepageFirstAreaLeftSide,
   HomepageFirstAreaRightSide,
-  HomepageImage,
-  HomepageImageContainer,
-  HomepageImageWrapper,
   HomepageProjects,
   HomepageSubTitle,
   HomepageText,
@@ -13,13 +10,11 @@ import {
 } from "../components/styled/HomepageStyled.ts";
 import { ProjectOverview } from "../components/common/ProjectOverview.tsx";
 import { useEffect, useState } from "react";
-import SEO from "../data/seo.ts";
 import { SocialContacts } from "../components/common/SocialContacts.tsx";
-import { Helmet } from "react-helmet-async";
+import SEOHelmet from "../components/common/SEOHelmet.tsx";
+import ProfileImage from "../components/common/ProfileImage.tsx";
 
 function Homepage() {
-  const helmet = SEO.find((item) => item.page === "home") || SEO[0];
-
   const [rotationAngle, setRotationAngle] = useState(5);
 
   useEffect(() => {
@@ -36,11 +31,7 @@ function Homepage() {
 
   return (
     <>
-      <Helmet>
-        <title>{DATA.main.title}</title>
-        <meta name="description" content={helmet.description} />
-        <meta name="keywords" content={helmet.keywords.join(", ")} />
-      </Helmet>
+      <SEOHelmet pageName="home" />
 
       <HomepageFirstArea>
         <HomepageFirstAreaLeftSide>
@@ -49,14 +40,11 @@ function Homepage() {
         </HomepageFirstAreaLeftSide>
 
         <HomepageFirstAreaRightSide>
-          <HomepageImageContainer>
-            <HomepageImageWrapper $rotationangle={rotationAngle}>
-              <HomepageImage
-                src="../mre-styled-portrait.svg"
-                alt="Homepage Image"
-              />
-            </HomepageImageWrapper>
-          </HomepageImageContainer>
+          <ProfileImage 
+            imageSrc="../mre-styled-portrait.svg"
+            imageAlt="Homepage Image"
+            rotationAngle={rotationAngle}
+          />
         </HomepageFirstAreaRightSide>
       </HomepageFirstArea>
 
@@ -64,7 +52,7 @@ function Homepage() {
       <HomepageProjects>
         <HomepageSubTitle>Projects</HomepageSubTitle>
         <HomepageText>
-          I’ve compiled a collection of tools and solutions crafted across
+          I've compiled a collection of tools and solutions crafted across
           diverse technologies.
         </HomepageText>
         <ProjectOverview />
