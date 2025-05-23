@@ -1,5 +1,4 @@
 import DATA from "../data/data.ts";
-import {Helmet} from "react-helmet";
 import SEO from "../data/seo.ts";
 import {
     HomepageFirstArea,
@@ -9,6 +8,7 @@ import {
     HomepageTitle
 } from "../components/styled/HomepageStyled.ts";
 import {ProjectOverview} from "../components/common/ProjectOverview.tsx";
+import { Helmet } from "react-helmet-async";
 
 function Projects() {
     const helmet = SEO.find((item) => item.page === "projects") || SEO[0];
