@@ -22,6 +22,27 @@ interface ProjectProps {
   link: string;
 }
 
+const ProjectContent = ({
+  logo,
+  title,
+  description,
+  linkText,
+}: Omit<ProjectProps, "link">) => {
+  return (
+    <ProjectContainer>
+      <ProjectLogo>
+        <img src={logo} alt={title} />
+      </ProjectLogo>
+      <ProjectTitle>{title}</ProjectTitle>
+      <ProjectDescription>{description}</ProjectDescription>
+      <ProjectLinkContainer>
+        <ProjectLinkIcon icon={faLink} />
+        <ProjectLinkText>{linkText}</ProjectLinkText>
+      </ProjectLinkContainer>
+    </ProjectContainer>
+  );
+};
+
 const Project = ({
   logo,
   title,
@@ -32,17 +53,12 @@ const Project = ({
   return (
     <ProjectStyled>
       <ProjectLink href={link} target="_blank">
-        <ProjectContainer>
-          <ProjectLogo>
-            <img src={logo} alt={title} />
-          </ProjectLogo>
-          <ProjectTitle>{title}</ProjectTitle>
-          <ProjectDescription>{description}</ProjectDescription>
-          <ProjectLinkContainer>
-            <ProjectLinkIcon icon={faLink} />
-            <ProjectLinkText>{linkText}</ProjectLinkText>
-          </ProjectLinkContainer>
-        </ProjectContainer>
+        <ProjectContent
+          logo={logo}
+          title={title}
+          description={description}
+          linkText={linkText}
+        />
       </ProjectLink>
     </ProjectStyled>
   );

@@ -13,7 +13,10 @@ export const NotFoundButton = styled.button`
   font-family: var(--secondary-font), sans-serif;
   font-weight: 600;
   margin-top: 1.5rem;
-  transition: background 0.2s, color 0.2s, transform 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;

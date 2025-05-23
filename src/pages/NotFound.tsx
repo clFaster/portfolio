@@ -1,6 +1,10 @@
 import { Title } from "../components/styled/PageStyled.ts";
 import { useNavigate } from "react-router-dom";
-import { NotFoundButton, NotFoundContainer, NotFoundText } from "../components/styled/NotFoundStyled.ts";
+import {
+  NotFoundButton,
+  NotFoundContainer,
+  NotFoundText,
+} from "../components/styled/NotFoundStyled.ts";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceSurprise, faHome } from "@fortawesome/free-solid-svg-icons";
 
@@ -12,7 +16,8 @@ function NotFound() {
         404 - Not Found <FontAwesomeIcon icon={faFaceSurprise} />
       </Title>
       <NotFoundText>
-        Whoops! There’s nothing here.<br />
+        Whoops! There’s nothing here.
+        <br />
         Maybe try heading home?
       </NotFoundText>
       <NotFoundButton onClick={() => navigate("/")}>
