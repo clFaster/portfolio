@@ -8,7 +8,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFaceSurprise, faHome } from "@fortawesome/free-solid-svg-icons";
 
-export const NotFound = () => {
+function NotFound() {
   const navigate = useNavigate();
   return (
     <NotFoundContainer>
@@ -27,3 +27,5 @@ export const NotFound = () => {
     </NotFoundContainer>
   );
 }
+
+export default NotFound;
