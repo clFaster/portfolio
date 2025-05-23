@@ -8,9 +8,7 @@ export const RouteTransition = () => {
 
   return (
     <AnimatePresence mode="wait" initial={false}>
-      <PageTransition key={location.pathname}>
-        {currentOutlet}
-      </PageTransition>
+      <PageTransition key={location.pathname}>{currentOutlet}</PageTransition>
     </AnimatePresence>
   );
 };
