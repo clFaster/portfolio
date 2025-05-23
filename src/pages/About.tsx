@@ -37,7 +37,7 @@ function About() {
         </HomepageFirstAreaLeftSide>
 
         <HomepageFirstAreaRightSide>
-          <ProfileImage 
+          <ProfileImage
             imageSrc="../mre-portrait.png"
             imageAlt="Drawing of Moritz Reis"
             rotationAngle={rotationAngle}

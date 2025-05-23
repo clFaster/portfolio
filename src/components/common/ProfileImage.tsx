@@ -10,7 +10,11 @@ interface ProfileImageProps {
   rotationAngle: number;
 }
 
-const ProfileImage = ({ imageSrc, imageAlt, rotationAngle }: ProfileImageProps) => {
+const ProfileImage = ({
+  imageSrc,
+  imageAlt,
+  rotationAngle,
+}: ProfileImageProps) => {
   return (
     <HomepageImageContainer>
       <HomepageImageWrapper $rotationangle={rotationAngle}>
