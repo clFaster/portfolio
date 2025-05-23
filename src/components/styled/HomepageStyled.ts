@@ -80,12 +80,12 @@ export const HomepageImageContainer = styled.div`
   }
 `;
 
-export const HomepageImageWrapper = styled.div<{ rotationangle: number }>`
+export const HomepageImageWrapper = styled.div<{ $rotationangle: number }>`
   width: 100%;
   height: 100%;
   overflow: hidden;
   border-radius: 40px;
-  transform: ${({ rotationangle }) => `rotate(${rotationangle}deg)`};
+  transform: ${({ $rotationangle }) => `rotate(${$rotationangle}deg)`};
   transition: transform 0.3s ease-out;
   position: relative;
 `;

@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound.tsx";
 import { MainLayout } from "./MainLayout.tsx";
 import { ThemeProvider } from "./context/ThemeContext.tsx";
 import { AnimationProvider } from "./context/AnimationContext.tsx";
+import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
   {
@@ -35,9 +36,11 @@ const router = createBrowserRouter([
 export const App = () => {
   return (
     <ThemeProvider>
-      <AnimationProvider>
-        <RouterProvider router={router} />
-      </AnimationProvider>
+      <HelmetProvider>
+        <AnimationProvider>
+          <RouterProvider router={router} />
+        </AnimationProvider>
+      </HelmetProvider>
     </ThemeProvider>
   );
 };

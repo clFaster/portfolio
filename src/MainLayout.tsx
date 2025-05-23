@@ -20,12 +20,6 @@ export const MainLayout = () => {
     const checkIsMobile = () => {
       const mobile = window.innerWidth < MOBILE_BREAKPOINT;
       setIsMobile(mobile);
-      console.log(
-        "MainLayout - Screen width:",
-        window.innerWidth,
-        "Is Mobile:",
-        mobile,
-      );
     };
 
     checkIsMobile();

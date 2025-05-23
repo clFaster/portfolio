@@ -13,9 +13,9 @@ import {
 } from "../components/styled/HomepageStyled.ts";
 import { ProjectOverview } from "../components/common/ProjectOverview.tsx";
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
 import SEO from "../data/seo.ts";
 import { SocialContacts } from "../components/common/SocialContacts.tsx";
+import { Helmet } from "react-helmet-async";
 
 function Homepage() {
   const helmet = SEO.find((item) => item.page === "home") || SEO[0];
@@ -50,7 +50,7 @@ function Homepage() {
 
         <HomepageFirstAreaRightSide>
           <HomepageImageContainer>
-            <HomepageImageWrapper rotationangle={rotationAngle}>
+            <HomepageImageWrapper $rotationangle={rotationAngle}>
               <HomepageImage
                 src="../mre-styled-portrait.svg"
                 alt="Homepage Image"
