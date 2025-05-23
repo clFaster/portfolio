@@ -14,24 +14,6 @@ import {
 import DATA from "../../data/data.ts";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 
-export const ProjectOverview = () => {
-  return (
-    <AllProjectsContainer>
-      {DATA.projects.map((project, index) => (
-        <AllProjectsProject key={index}>
-          <Project
-            logo={project.logo}
-            title={project.title}
-            description={project.description}
-            linkText={project.linkText}
-            link={project.link}
-          />
-        </AllProjectsProject>
-      ))}
-    </AllProjectsContainer>
-  );
-};
-
 interface ProjectProps {
   logo: string;
   title: string;
@@ -63,5 +45,23 @@ const Project = ({
         </ProjectContainer>
       </ProjectLink>
     </ProjectStyled>
+  );
+};
+
+export const ProjectOverview = () => {
+  return (
+    <AllProjectsContainer>
+      {DATA.projects.map((project, index) => (
+        <AllProjectsProject key={index}>
+          <Project
+            logo={project.logo}
+            title={project.title}
+            description={project.description}
+            linkText={project.linkText}
+            link={project.link}
+          />
+        </AllProjectsProject>
+      ))}
+    </AllProjectsContainer>
   );
 };
