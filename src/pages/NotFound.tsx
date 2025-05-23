@@ -1,5 +1,6 @@
 import { Title } from "../components/styled/PageStyled.ts";
 import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 import {
   NotFoundButton,
   NotFoundContainer,
@@ -10,6 +11,11 @@ import { faFaceSurprise, faHome } from "@fortawesome/free-solid-svg-icons";
 
 function NotFound() {
   const navigate = useNavigate();
+  
+  const handleGoHome = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
+  
   return (
     <NotFoundContainer>
       <Title>
@@ -19,8 +25,8 @@ function NotFound() {
         Whoops! There’s nothing here.
         <br />
         Maybe try heading home?
-      </NotFoundText>
-      <NotFoundButton onClick={() => navigate("/")}>
+      </NotFoundText>      
+      <NotFoundButton onClick={handleGoHome}>
         <FontAwesomeIcon icon={faHome} />
         Go Home
       </NotFoundButton>
