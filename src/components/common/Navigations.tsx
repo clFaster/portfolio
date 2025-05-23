@@ -47,9 +47,16 @@ const Navigations = () => {
     },
     [active, setDirection, setIsOpen],
   );
+
+  const handleHomeClick = useCallback(() => handleNavigate("home"), [handleNavigate]);
+  const handleAboutClick = useCallback(() => handleNavigate("about"), [handleNavigate]);
+  const handleProjectsClick = useCallback(() => handleNavigate("projects"), [handleNavigate]);
+  
+  const handleToggleMenu = useCallback(() => setIsOpen(!isOpen), [isOpen, setIsOpen]);
+
   return (
     <NavContainer>
-      <ToggleButton $isOpen={isOpen} onClick={() => setIsOpen(!isOpen)}>
+      <ToggleButton $isOpen={isOpen} onClick={handleToggleMenu}>
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x" />
       </ToggleButton>
 
@@ -57,17 +64,17 @@ const Navigations = () => {
         <NavBackground>
           <NavList>
             <NavItem $isActive={active === "home"}>
-              <Link to="/" onClick={() => handleNavigate("home")}>
+              <Link to="/" onClick={handleHomeClick}>
                 Home
               </Link>
             </NavItem>
             <NavItem $isActive={active === "about"}>
-              <Link to="/about" onClick={() => handleNavigate("about")}>
+              <Link to="/about" onClick={handleAboutClick}>
                 About
               </Link>
             </NavItem>
             <NavItem $isActive={active === "projects"}>
-              <Link to="/projects" onClick={() => handleNavigate("projects")}>
+              <Link to="/projects" onClick={handleProjectsClick}>
                 Projects
               </Link>
             </NavItem>
