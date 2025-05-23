@@ -50,7 +50,7 @@ function Homepage() {
 
         <HomepageFirstAreaRightSide>
           <HomepageImageContainer>
-            <HomepageImageWrapper rotationangle={rotationAngle}>
+            <HomepageImageWrapper $rotationangle={rotationAngle}>
               <HomepageImage
                 src="../mre-styled-portrait.svg"
                 alt="Homepage Image"

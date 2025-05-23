@@ -47,7 +47,7 @@ function About() {
 
         <HomepageFirstAreaRightSide>
           <HomepageImageContainer>
-            <HomepageImageWrapper rotationangle={rotationAngle}>
+            <HomepageImageWrapper $rotationangle={rotationAngle}>
               <HomepageImage
                 src="../mre-portrait.png"
                 alt="Drawing of Moritz Reis"
