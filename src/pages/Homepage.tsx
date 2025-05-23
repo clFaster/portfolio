@@ -40,7 +40,7 @@ function Homepage() {
         </HomepageFirstAreaLeftSide>
 
         <HomepageFirstAreaRightSide>
-          <ProfileImage 
+          <ProfileImage
             imageSrc="../mre-styled-portrait.svg"
             imageAlt="Homepage Image"
             rotationAngle={rotationAngle}
