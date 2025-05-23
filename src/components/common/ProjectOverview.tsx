@@ -51,8 +51,8 @@ const Project = ({
 export const ProjectOverview = () => {
   return (
     <AllProjectsContainer>
-      {DATA.projects.map((project, index) => (
-        <AllProjectsProject key={index}>
+      {DATA.projects.map((project) => (
+        <AllProjectsProject key={project.link}>
           <Project
             logo={project.logo}
             title={project.title}
