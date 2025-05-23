@@ -1,5 +1,4 @@
 import DATA from "../data/data.ts";
-import { Helmet } from "react-helmet";
 import {
   HomepageFirstArea,
   HomepageFirstAreaLeftSide,
@@ -13,6 +12,7 @@ import {
 import SEO from "../data/seo.ts";
 import { useEffect, useState } from "react";
 import { SocialContacts } from "../components/common/SocialContacts.tsx";
+import { Helmet } from "react-helmet-async";
 
 function About() {
   const helmet = SEO.find((item) => item.page === "about") || SEO[0];
@@ -47,7 +47,7 @@ function About() {
 
         <HomepageFirstAreaRightSide>
           <HomepageImageContainer>
-            <HomepageImageWrapper rotationangle={rotationAngle}>
+            <HomepageImageWrapper $rotationangle={rotationAngle}>
               <HomepageImage
                 src="../mre-portrait.png"
                 alt="Drawing of Moritz Reis"
