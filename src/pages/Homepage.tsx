@@ -52,7 +52,7 @@ function Homepage() {
       <HomepageProjects>
         <HomepageSubTitle>Projects</HomepageSubTitle>
         <HomepageText>
-          I've compiled a collection of tools and solutions crafted across
+          I&apos;ve compiled a collection of tools and solutions crafted across
           diverse technologies.
         </HomepageText>
         <ProjectOverview />
