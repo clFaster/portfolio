@@ -10,8 +10,8 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
   const { direction } = useAnimation();
   const variants = {
     // Slide In
-    initial: (direction: "left" | "right" | null) => ({
-      x: direction === "right" ? "100%" : direction === "left" ? "-100%" : 0,
+    initial: (direction: "left" | "right") => ({
+      x: direction === "right" ? "100%" : "-100%",
       opacity: 0,
     }),
     animate: {
@@ -23,8 +23,8 @@ export const PageTransition = ({ children }: PageTransitionProps) => {
       },
     },
     // Slide Out - opposite direction
-    exit: (direction: "left" | "right" | null) => ({
-      x: direction === "left" ? "100%" : direction === "right" ? "-100%" : 0,
+    exit: (direction: "left" | "right") => ({
+      x: direction === "left" ? "100%" : "-100%",
       opacity: 0,
       transition: {
         x: { type: "spring", stiffness: 300, damping: 30 },
