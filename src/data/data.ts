@@ -69,7 +69,7 @@ const DATA: Data = {
         "Browser Extension to instantly generate and share a QR code for the webpage you're currently viewing, making link sharing seamless and quick.",
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
       linkText: "View Project",
-      link: "https://github.com/clFaster/TapToQR",
+      link: "https://taptoqr.moritzreis.dev/",
     },
     {
       title: "StatusSwift",
