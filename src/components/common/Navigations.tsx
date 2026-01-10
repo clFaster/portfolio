@@ -48,11 +48,23 @@ const Navigations = () => {
     [active, setDirection, setIsOpen],
   );
 
-  const handleHomeClick = useCallback(() => handleNavigate("home"), [handleNavigate]);
-  const handleAboutClick = useCallback(() => handleNavigate("about"), [handleNavigate]);
-  const handleProjectsClick = useCallback(() => handleNavigate("projects"), [handleNavigate]);
-  
-  const handleToggleMenu = useCallback(() => setIsOpen(!isOpen), [isOpen, setIsOpen]);
+  const handleHomeClick = useCallback(
+    () => handleNavigate("home"),
+    [handleNavigate],
+  );
+  const handleAboutClick = useCallback(
+    () => handleNavigate("about"),
+    [handleNavigate],
+  );
+  const handleProjectsClick = useCallback(
+    () => handleNavigate("projects"),
+    [handleNavigate],
+  );
+
+  const handleToggleMenu = useCallback(
+    () => setIsOpen(!isOpen),
+    [isOpen, setIsOpen],
+  );
 
   return (
     <NavContainer>
