@@ -1,5 +1,5 @@
 import impressumData from "../data/impressum.json";
-import { Title, Subtitle, Text } from "../components/styled/PageStyled.ts";
+import { Title, Subtitle } from "../components/styled/PageStyled.ts";
 import SEOHelmet from "../components/common/SEOHelmet.tsx";
 import styled from "styled-components";
 
