@@ -29,6 +29,12 @@ const SEO: SEOEntry[] = [
       "Impressum und rechtliche Informationen für moritzreis.dev. Angaben gemäß § 5 ECG und Offenlegung gemäß § 25 Mediengesetz.",
     keywords: ["Impressum", "Moritz Reis", "Legal Information"],
   },
+  {
+    page: "datenschutz",
+    description:
+      "Datenschutzerklärung für moritzreis.dev. Informationen über die Verarbeitung Ihrer Daten gemäß DSGVO.",
+    keywords: ["Datenschutz", "Privacy Policy", "DSGVO", "Moritz Reis"],
+  },
 ];
 
 export default SEO;

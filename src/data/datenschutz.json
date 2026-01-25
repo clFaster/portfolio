@@ -1,0 +1,114 @@
+{
+  "title": "Datenschutzerklärung",
+  "subtitle": "Informationen über die Verarbeitung Ihrer Daten gemäß Art. 13 DSGVO",
+  "sections": [
+    {
+      "heading": "Verantwortlicher",
+      "content": [
+        {
+          "label": "Name",
+          "value": "Moritz Reis"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Wien, Österreich"
+        },
+        {
+          "label": "E-Mail",
+          "value": "me@moritzreis.dev"
+        }
+      ]
+    },
+    {
+      "heading": "Allgemeines zur Datenverarbeitung",
+      "content": [
+        {
+          "label": "",
+          "value": "Diese Website ist eine private Portfolio-Website. Beim Besuch dieser Website werden keine personenbezogenen Daten aktiv erhoben, gespeichert oder verarbeitet."
+        }
+      ]
+    },
+    {
+      "heading": "Hosting",
+      "content": [
+        {
+          "label": "",
+          "value": "Diese Website wird auf einem externen Server gehostet. Die dabei technisch notwendigen Daten (z.B. IP-Adresse, Browsertyp, Zugriffszeitpunkt) können vom Hosting-Provider in Server-Log-Dateien gespeichert werden. Diese Datenverarbeitung erfolgt auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO) zur Sicherstellung des Betriebs und der Sicherheit der Website."
+        }
+      ]
+    },
+    {
+      "heading": "Google Fonts",
+      "content": [
+        {
+          "label": "",
+          "value": "Diese Website verwendet Google Fonts zur Darstellung von Schriftarten. Google Fonts ist ein Dienst der Google Ireland Limited (\"Google\"), Gordon House, Barrow Street, Dublin 4, Irland. Beim Aufruf dieser Website lädt Ihr Browser die benötigten Web Fonts von den Servern von Google. Dabei wird Ihre IP-Adresse an Google übertragen. Die Nutzung von Google Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung unserer Website. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Weitere Informationen zu Google Fonts finden Sie unter https://developers.google.com/fonts/faq und in der Datenschutzerklärung von Google: https://policies.google.com/privacy"
+        }
+      ]
+    },
+    {
+      "heading": "Content Delivery Network (jsDelivr)",
+      "content": [
+        {
+          "label": "",
+          "value": "Diese Website nutzt jsDelivr, ein Content Delivery Network (CDN), zur Auslieferung von Grafiken und Icons. jsDelivr ist ein Dienst der Volentio JSD Limited. Beim Aufruf dieser Website lädt Ihr Browser die benötigten Ressourcen von den Servern von jsDelivr. Dabei wird Ihre IP-Adresse an jsDelivr übertragen. Die Nutzung eines CDN dient der schnelleren und effizienteren Bereitstellung von Inhalten unserer Website. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Weitere Informationen zu jsDelivr finden Sie unter https://www.jsdelivr.com/terms/privacy-policy"
+        }
+      ]
+    },
+    {
+      "heading": "Cookies und Tracking",
+      "content": [
+        {
+          "label": "",
+          "value": "Diese Website verwendet keine Cookies und setzt keine Tracking-Tools oder Analysedienste ein. Es erfolgt keine Verfolgung des Nutzerverhaltens."
+        }
+      ]
+    },
+    {
+      "heading": "Externe Links",
+      "content": [
+        {
+          "label": "",
+          "value": "Diese Website enthält Links zu externen Websites (z.B. GitHub, LinkedIn, Stack Overflow). Beim Klick auf diese Links verlassen Sie diese Website. Für die Datenverarbeitung auf den verlinkten Websites sind deren Betreiber verantwortlich. Bitte informieren Sie sich dort über die jeweiligen Datenschutzbestimmungen."
+        }
+      ]
+    },
+    {
+      "heading": "Kontaktaufnahme",
+      "content": [
+        {
+          "label": "",
+          "value": "Bei Kontaktaufnahme per E-Mail werden die von Ihnen mitgeteilten Daten (E-Mail-Adresse, Name, Nachrichteninhalt) zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) und/oder auf unseren berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO)."
+        }
+      ]
+    },
+    {
+      "heading": "Ihre Rechte",
+      "content": [
+        {
+          "label": "",
+          "value": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gemäß den Artikeln 15-21 DSGVO. Zur Ausübung dieser Rechte wenden Sie sich bitte an me@moritzreis.dev. Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren."
+        }
+      ]
+    },
+    {
+      "heading": "Speicherdauer",
+      "content": [
+        {
+          "label": "",
+          "value": "Soweit personenbezogene Daten verarbeitet werden, werden diese nur so lange gespeichert, wie es für die Erfüllung des jeweiligen Zwecks erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen."
+        }
+      ]
+    },
+    {
+      "heading": "Änderungen dieser Datenschutzerklärung",
+      "content": [
+        {
+          "label": "",
+          "value": "Diese Datenschutzerklärung kann bei Bedarf angepasst werden, um rechtlichen Anforderungen oder Änderungen an der Website gerecht zu werden."
+        }
+      ]
+    }
+  ],
+  "lastUpdated": "Januar 2026"
+}
