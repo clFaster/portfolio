@@ -23,6 +23,19 @@ export const FooterContent = styled.div`
   }
 `;
 
+export const FooterLink = styled.div`
+  a {
+    color: var(--tertiary-color);
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+`;
+
 export const FooterCredits = styled.div`
   flex-basis: 50%;
   justify-content: flex-end;

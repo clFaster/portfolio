@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage.tsx";
 import About from "./pages/About.tsx";
 import Projects from "./pages/Projects.tsx";
+import Impressum from "./pages/Impressum.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import { MainLayout } from "./MainLayout.tsx";
 import { ThemeProvider } from "./context/ThemeContext.tsx";
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects />,
+      },
+      {
+        path: "/impressum",
+        element: <Impressum />,
       },
       {
         path: "*",

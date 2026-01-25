@@ -23,6 +23,12 @@ const SEO: SEOEntry[] = [
       "I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to.",
     keywords: ["Moritz", "Moritz R", "Moritz Reis"],
   },
+  {
+    page: "impressum",
+    description:
+      "Impressum und rechtliche Informationen für moritzreis.dev. Angaben gemäß § 5 ECG und Offenlegung gemäß § 25 Mediengesetz.",
+    keywords: ["Impressum", "Moritz Reis", "Legal Information"],
+  },
 ];
 
 export default SEO;

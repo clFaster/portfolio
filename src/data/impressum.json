@@ -1,0 +1,41 @@
+{
+  "title": "Impressum",
+  "subtitle": "Angaben gemäß § 5 ECG und Offenlegung gemäß § 25 Mediengesetz",
+  "sections": [
+    {
+      "heading": "Medieninhaber und Herausgeber",
+      "content": [
+        {
+          "label": "Name",
+          "value": "Moritz Reis"
+        },
+        {
+          "label": "Wohnort",
+          "value": "Wien, Österreich"
+        },
+        {
+          "label": "E-Mail",
+          "value": "me@moritzreis.dev"
+        }
+      ]
+    },
+    {
+      "heading": "Unternehmensgegenstand",
+      "content": [
+        {
+          "label": "",
+          "value": "Private Portfolio-Website zur Präsentation von Softwareprojekten"
+        }
+      ]
+    },
+    {
+      "heading": "Haftungsausschluss",
+      "content": [
+        {
+          "label": "",
+          "value": "Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+        }
+      ]
+    }
+  ]
+}
