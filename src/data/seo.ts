@@ -8,13 +8,13 @@ const SEO: SEOEntry[] = [
   {
     page: "home",
     description:
-      "Experienced backend developer specializing in ASP.NET and more, with a proven track record of building scalable, secure, and reliable web applications. Proficient in a range of frameworks and technologies, delivering high-quality code for modern web development.",
+      "Software Architect at SIMStation building scalable, secure, and maintainable systems. Focused on pragmatic architecture, clean interfaces, and delivering reliable software with ASP.NET, C#, and modern web tech.",
     keywords: ["Moritz", "Moritz R", "Moritz Reis"],
   },
   {
     page: "about",
     description:
-      "Experienced backend developer specializing in ASP.NET and more, with a proven track record of building scalable, secure, and reliable web applications. Proficient in a range of frameworks and technologies, delivering high-quality code for modern web development.",
+      "Moritz Reis is a Software Architect at SIMStation. He designs scalable architectures, builds robust .NET solutions, and partners with teams to ship maintainable software.",
     keywords: ["Moritz", "Moritz R", "Moritz Reis"],
   },
   {

@@ -38,7 +38,7 @@ interface Data {
 
 const DATA: Data = {
   main: {
-    title: "Moritz Reis | Software Engineer Portfolio",
+    title: "Moritz Reis | Software Architect Portfolio",
     name: "Moritz R.",
     email: "me@moritzreis.dev",
   },
@@ -50,16 +50,16 @@ const DATA: Data = {
   },
 
   homepage: {
-    title: "Full-stack Software Engineer and Code Enthusiast",
+    title: "Software Architect building scalable systems",
     description:
-      "Hey there! I'm a software engineer with a love for ASP.NET, C# and much more. Currently crafting cool things at SIMStation in Vienna. I enjoy solving puzzles through code, learning new tricks, and always aim to build stuff that's scalable, secure, and just plain awesome. Let's make tech fun!",
+      "Hey there! I'm a software architect with a love for ASP.NET, C#, and more. Currently designing and building scalable systems at SIMStation in Vienna. I enjoy turning messy problems into clear, reliable architectures, mentoring teams, and shipping software that's secure, maintainable, and actually pleasant to work with.",
   },
 
   about: {
     title:
       "I’m Moritz. I live in Vienna, where I code, create, and occasionally break things (for science!)",
     description:
-      "I've had the chance to work on all sorts of projects, from IT support to software engineering at Infineon, the Austrian Postal Service and now at SIMStation. Studied software engineering and business management at Technical University Graz, so I’ve got a good mix of tech and business. Always excited to collaborate, share ideas, and keep learning! Dont hesitate to reach out.",
+      "I've worked across a range of environments, from IT support to software engineering at Infineon and the Austrian Postal Service, and now as a Software Architect at SIMStation. I studied software engineering and business management at Technical University Graz, which helps me bridge technical decisions with real-world constraints. I care about pragmatic architecture, clean interfaces, and helping teams move fast without breaking things. Don't hesitate to reach out.",
   },
 
   projects: [

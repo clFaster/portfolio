@@ -31,10 +31,11 @@ function Projects() {
         <HomepageText>
           Welcome to my project showcase, where I’ve compiled a collection of
           tools and solutions crafted across diverse technologies. Each project
-          here is a step in my ongoing journey as a software engineer, solving
-          real-world problems and exploring new capabilities. I’m passionate
-          about open-source development and believe in creating accessible,
-          community-driven software that can be built upon and shared.
+          here is a step in my ongoing journey as a software architect—solving
+          real-world problems, exploring new capabilities, and refining how I
+          design systems that last. I’m passionate about open-source development
+          and believe in creating accessible, community-driven software that can
+          be built upon and shared.
         </HomepageText>
         <ProjectOverview />
       </HomepageProjects>
