@@ -80,6 +80,14 @@ const DATA: Data = {
       link: "https://github.com/clFaster/StatusSwift",
     },
     {
+      title: "TeilFair",
+      description:
+        "Split expenses fairly with friends. Track shared costs, see who owes whom, and settle up easily. No sign-up required.",
+      logo: "https://teilfair.moritzreis.dev/teilfair-logo.svg",
+      linkText: "View Project",
+      link: "https://teilfair.moritzreis.dev/",
+    },
+    {
       title: "SVNPathCopy",
       description:
         "Windows Context Menu extension - lets you copy SVN path with revision number.",
