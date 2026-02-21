@@ -1,34 +1,31 @@
 :root {
-  /* ------- colors (light theme) ------- */
-  --primary-color: #27272a;
-  --secondary-color: #65656d;
-  --tertiary-color: #acacb4;
-  --quaternary-color: #e4e4e7;
-  --link-color: #14b8a6;
-  --background-color: #ffffff;
-  --card-background: #f4f4f5;
-  --border-color: #e4e4e7;
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  /* ---------------------- */
+  /* ── Terminal color palette ── */
+  --term-bg: #0d1117;
+  --term-surface: #161b22;
+  --term-surface-2: #1c2129;
+  --term-border: #30363d;
+  --term-text: #e6edf3;
+  --term-text-secondary: #8b949e;
+  --term-text-muted: #484f58;
+  --term-green: #00ff88;
+  --term-blue: #58a6ff;
+  --term-purple: #bc8cff;
 
-  /* ------- fonts ------- */
-  --primary-font: "Heebo", sans-serif;
-  --secondary-font: "Roboto", sans-serif;
-  /* --------------------- */
+  /* ── Legacy variable mappings (for any components that still reference them) ── */
+  --primary-color: #e6edf3;
+  --secondary-color: #8b949e;
+  --tertiary-color: #484f58;
+  --quaternary-color: #30363d;
+  --link-color: #00ff88;
+  --background-color: #0d1117;
+  --card-background: #161b22;
+  --border-color: #30363d;
+  --shadow-color: rgba(0, 0, 0, 0.4);
 
-  /* ------- transition ------- */
-  --theme-transition: all 0.3s ease;
-  /* --------------------- */
-}
+  /* ── Fonts ── */
+  --primary-font: "Manrope", sans-serif;
+  --secondary-font: "JetBrains Mono", monospace;
 
-[data-theme="dark"] {
-  --primary-color: #e4e4e7;
-  --secondary-color: #a1a1aa;
-  --tertiary-color: #71717a;
-  --quaternary-color: #3f3f46;
-  --link-color: #2dd4bf;
-  --background-color: #18181b;
-  --card-background: #27272a;
-  --border-color: #3f3f46;
-  --shadow-color: rgba(0, 0, 0, 0.3);
+  /* ── Transition ── */
+  --theme-transition: all 0.2s ease;
 }

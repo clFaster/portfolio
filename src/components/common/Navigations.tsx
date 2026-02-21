@@ -1,106 +1,122 @@
 import { Link, useLocation } from "react-router-dom";
-import {
-  MobileNavFooter,
-  NavBackground,
-  Navbar,
-  NavContainer,
-  NavItem,
-  NavList,
-  ToggleButton,
-} from "../styled/NavigationStyled";
-import { useState, useCallback } from "react";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ThemeToggle from "./ThemeToggle";
-import useAnimation from "../../context/useAnimation";
+import styled from "styled-components";
+import { WindowDots, Dot } from "../styled/TerminalStyled.ts";
+import DATA from "../../data/data.ts";
 
-// Navigation order to determine direction
-const navOrder = {
-  home: 0,
-  about: 1,
-  projects: 2,
-};
+/* ── NAV STYLED COMPONENTS ── */
+
+const NavBar = styled.nav`
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--term-surface);
+  border-bottom: 1px solid var(--term-border);
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  gap: 12px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+
+  @media (max-width: 640px) {
+    padding: 0 16px;
+    gap: 8px;
+    height: 44px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 11px;
+    height: 40px;
+  }
+`;
+
+const TabLabel = styled.span`
+  color: var(--term-text-secondary);
+  border-bottom: 2px solid var(--term-green);
+  padding-bottom: 2px;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+`;
+
+const NavLinks = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+`;
+
+const NavLink = styled(Link)<{ $isActive: boolean }>`
+  color: ${(p) =>
+    p.$isActive ? "var(--term-green)" : "var(--term-text-secondary)"};
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+  font-size: 13px;
+
+  ${(p) =>
+    p.$isActive &&
+    `
+    background: rgba(0, 255, 136, 0.08);
+  `}
+
+  &:hover {
+    color: var(--term-green);
+    background: rgba(0, 255, 136, 0.06);
+  }
+
+  &::before {
+    content: "${(p) => (p.$isActive ? "> " : "")}";
+    color: var(--term-green);
+  }
+
+  @media (max-width: 640px) {
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 4px 6px;
+    font-size: 11px;
+  }
+`;
 
 const Navigations = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  const active = location.pathname.split("/")[1] || "home";
-  const { setDirection } = useAnimation();
+  const path = location.pathname;
 
-  // Helper to determine which way to animate when navigating
-  const handleNavigate = useCallback(
-    (targetPage: string) => {
-      if (targetPage === active) return;
-      const currentIndex = navOrder[active as keyof typeof navOrder] || 0;
-      const targetIndex = navOrder[targetPage as keyof typeof navOrder] || 0;
-
-      if (targetIndex > currentIndex) {
-        setDirection("right");
-      } else if (targetIndex < currentIndex) {
-        setDirection("left");
-      } else {
-        setDirection(null);
-      }
-
-      // Close mobile menu
-      setIsOpen(false);
-    },
-    [active, setDirection, setIsOpen],
-  );
-
-  const handleHomeClick = useCallback(
-    () => handleNavigate("home"),
-    [handleNavigate],
-  );
-  const handleAboutClick = useCallback(
-    () => handleNavigate("about"),
-    [handleNavigate],
-  );
-  const handleProjectsClick = useCallback(
-    () => handleNavigate("projects"),
-    [handleNavigate],
-  );
-
-  const handleToggleMenu = useCallback(
-    () => setIsOpen(!isOpen),
-    [isOpen, setIsOpen],
-  );
+  const isActive = (route: string) => {
+    if (route === "/") return path === "/";
+    return path.startsWith(route);
+  };
 
   return (
-    <NavContainer>
-      <ToggleButton $isOpen={isOpen} onClick={handleToggleMenu}>
-        <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="2x" />
-      </ToggleButton>
-
-      <Navbar $isOpen={isOpen}>
-        <NavBackground>
-          <NavList>
-            <NavItem $isActive={active === "home"}>
-              <Link to="/" onClick={handleHomeClick}>
-                Home
-              </Link>
-            </NavItem>
-            <NavItem $isActive={active === "about"}>
-              <Link to="/about" onClick={handleAboutClick}>
-                About
-              </Link>
-            </NavItem>
-            <NavItem $isActive={active === "projects"}>
-              <Link to="/projects" onClick={handleProjectsClick}>
-                Projects
-              </Link>
-            </NavItem>
-            {/* Theme toggle for desktop */}
-            <NavItem $isActive={false} className="theme-toggle-item">
-              <ThemeToggle />
-            </NavItem>
-          </NavList>
-          <MobileNavFooter className="theme-toggle-mobile">
-            <ThemeToggle />
-          </MobileNavFooter>
-        </NavBackground>
-      </Navbar>
-    </NavContainer>
+    <NavBar>
+      <WindowDots>
+        <Dot $color="#ff5f57" />
+        <Dot $color="#febc2e" />
+        <Dot $color="#28c840" />
+      </WindowDots>
+      <TabLabel>{DATA.main.name} &mdash; portfolio</TabLabel>
+      <NavLinks>
+        <NavLink to="/" $isActive={isActive("/")}>
+          home
+        </NavLink>
+        <NavLink to="/about" $isActive={isActive("/about")}>
+          about
+        </NavLink>
+        <NavLink to="/projects" $isActive={isActive("/projects")}>
+          projects
+        </NavLink>
+      </NavLinks>
+    </NavBar>
   );
 };
 

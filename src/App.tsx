@@ -6,8 +6,6 @@ import Impressum from "./pages/Impressum.tsx";
 import Datenschutz from "./pages/Datenschutz.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import { MainLayout } from "./MainLayout.tsx";
-import { ThemeProvider } from "./context/ThemeProvider.tsx";
-import { AnimationProvider } from "./context/AnimationProvider.tsx";
 import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
@@ -45,12 +43,8 @@ const router = createBrowserRouter([
 
 export const App = () => {
   return (
-    <ThemeProvider>
-      <HelmetProvider>
-        <AnimationProvider>
-          <RouterProvider router={router} />
-        </AnimationProvider>
-      </HelmetProvider>
-    </ThemeProvider>
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   );
 };
