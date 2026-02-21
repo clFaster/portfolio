@@ -6,8 +6,8 @@ import Impressum from "./pages/Impressum.tsx";
 import Datenschutz from "./pages/Datenschutz.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import { MainLayout } from "./MainLayout.tsx";
-import { ThemeProvider } from "./context/ThemeContext.tsx";
-import { AnimationProvider } from "./context/AnimationContext.tsx";
+import { ThemeProvider } from "./context/ThemeProvider.tsx";
+import { AnimationProvider } from "./context/AnimationProvider.tsx";
 import { HelmetProvider } from "react-helmet-async";
 
 const router = createBrowserRouter([
