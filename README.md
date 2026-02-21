@@ -15,16 +15,17 @@ Live: https://moritzreis.dev
 ## Local Development
 
 ```sh
-npm install
-npm run dev
+corepack enable
+pnpm install
+pnpm dev
 ```
 
 Useful scripts:
 
 ```sh
-npm run build
-npm run preview
-npm run lint
+pnpm build
+pnpm preview
+pnpm lint
 ```
 
 ## Content Updates
