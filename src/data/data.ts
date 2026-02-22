@@ -38,8 +38,8 @@ interface Data {
 
 const DATA: Data = {
   main: {
-    title: "Moritz Reis | Software Architect Portfolio",
-    name: "Moritz R.",
+    title: "Moritz Reis | Portfolio",
+    name: "Moritz Reis",
     email: "me@moritzreis.dev",
   },
 
