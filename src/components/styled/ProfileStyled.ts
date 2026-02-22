@@ -7,12 +7,12 @@ export const TwoColumnGrid = styled.div`
   gap: 32px;
   align-items: start;
 
-  @media (max-width: 860px) {
+  @media (max-width: 1000px) {
     grid-template-columns: 1fr 220px;
     gap: 24px;
   }
 
-  @media (max-width: 680px) {
+  @media (max-width: 750px) {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -46,7 +46,7 @@ export const PortraitFrame = styled.div`
   border-radius: 8px;
   overflow: hidden;
 
-  @media (max-width: 680px) {
+  @media (max-width: 750px) {
     max-width: 240px;
   }
 `;
