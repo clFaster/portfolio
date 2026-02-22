@@ -68,15 +68,19 @@ const TypedText = styled.span`
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid var(--term-green);
-  animation:
-    ${typeIn} 2.5s steps(40, end) forwards,
-    ${blink} 0.8s step-end infinite;
+  animation: ${typeIn} 2.5s steps(40, end) forwards;
   max-width: 100%;
+
+  &::after {
+    content: "|";
+    color: var(--term-green);
+    margin-left: 4px;
+    animation: ${blink} 0.8s step-end infinite;
+  }
 
   @media (max-width: 680px) {
     white-space: normal;
-    animation: ${blink} 0.8s step-end infinite;
+    animation: none;
     overflow: visible;
   }
 `;
