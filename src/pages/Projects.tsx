@@ -18,6 +18,11 @@ import {
 const ProjectList = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 0 -12px;
+
+  @media (max-width: 640px) {
+    margin: 0 -8px;
+  }
 `;
 
 const ProjectRow = styled.a`
@@ -25,7 +30,7 @@ const ProjectRow = styled.a`
   grid-template-columns: 20px 1fr auto;
   gap: 16px;
   align-items: start;
-  padding: 16px 0;
+  padding: 16px 12px;
   text-decoration: none;
   color: inherit;
   border-bottom: 1px solid var(--term-border);
@@ -42,7 +47,7 @@ const ProjectRow = styled.a`
   @media (max-width: 640px) {
     grid-template-columns: 20px 1fr;
     gap: 12px;
-    padding: 14px 0;
+    padding: 14px 8px;
   }
 `;
 
