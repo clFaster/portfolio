@@ -36,10 +36,6 @@ Most copy lives here:
 - `src/data/seo.ts` (meta descriptions)
 - `src/data/impressum.json` and `src/data/datenschutz.json` (legal pages)
 
-## Credits
-
-Styling inspired by https://github.com/truethari/reactfolio.
-
 ## License
 
 MIT - see `LICENSE`.
