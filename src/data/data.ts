@@ -64,6 +64,14 @@ const DATA: Data = {
 
   projects: [
     {
+      title: "ExcaStoneBoard",
+      description:
+        "An unofficial multi-board manager for Excalidraw - manage multiple drawing boards without losing access to older ones.",
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png",
+      linkText: "View Project",
+      link: "https://github.com/clFaster/ExcaStoneBoard",
+    },
+    {
       title: "TapToQR",
       description:
         "Browser Extension to instantly generate and share a QR code for the webpage you're currently viewing, making link sharing seamless and quick.",
