@@ -15,7 +15,6 @@ import {
   Spacer,
   blink,
   typeIn,
-  getTechFromLogo,
   getSocialLabel,
 } from "../components/styled/TerminalStyled.ts";
 import {
@@ -178,7 +177,9 @@ function Homepage() {
                   <ProjectDesc>{project.description}</ProjectDesc>
                 </ProjectInfo>
                 <TagRow>
-                  <TechTag>{getTechFromLogo(project.logo)}</TechTag>
+                  {project.tech.map((tech) => (
+                    <TechTag key={`${project.title}-${tech}`}>{tech}</TechTag>
+                  ))}
                 </TagRow>
               </ProjectRow>
             ))}

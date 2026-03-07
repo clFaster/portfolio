@@ -9,7 +9,6 @@ import {
   SectionComment,
   CommentBlock,
   Spacer,
-  getTechFromLogo,
 } from "../components/styled/TerminalStyled.ts";
 import {
   ProjectList,
@@ -83,7 +82,9 @@ function Projects() {
                   <ProjectDesc>{project.description}</ProjectDesc>
                 </ProjectInfo>
                 <TagRow>
-                  <TechTag>{getTechFromLogo(project.logo)}</TechTag>
+                  {project.tech.map((tech) => (
+                    <TechTag key={`${project.title}-${tech}`}>{tech}</TechTag>
+                  ))}
                 </TagRow>
               </ProjectRow>
             ))}

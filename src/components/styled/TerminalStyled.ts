@@ -256,15 +256,6 @@ export const Spacer = styled.div<{ $h?: number }>`
 
 /* ── HELPERS ── */
 
-export function getTechFromLogo(logo: string): string {
-  if (logo.includes("javascript")) return "JavaScript";
-  if (logo.includes("typescript")) return "TypeScript";
-  if (logo.includes("csharp")) return "C#";
-  if (logo.includes("python")) return "Python";
-  if (logo.includes("teilfair")) return "React";
-  return "Code";
-}
-
 export function getSocialLabel(url: string): string {
   if (url.includes("github")) return "github.com/clFaster";
   if (url.includes("linkedin")) return "linkedin.com/in/moritzreis";
