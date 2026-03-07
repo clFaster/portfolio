@@ -68,7 +68,7 @@ const DATA: Data = {
       title: "ExcaStoneBoard",
       description:
         "An unofficial multi-board manager for Excalidraw - manage multiple drawing boards without losing access to older ones.",
-      tech: ["TypeScript"],
+      tech: ["TypeScript", "Rust"],
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/typescript/typescript.png",
       linkText: "View Project",
       link: "https://github.com/clFaster/ExcaStoneBoard",
@@ -77,7 +77,7 @@ const DATA: Data = {
       title: "TapToQR",
       description:
         "Browser Extension to instantly generate and share a QR code for the webpage you're currently viewing, making link sharing seamless and quick.",
-      tech: ["JavaScript"],
+      tech: ["TypeScript"],
       logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
       linkText: "View Project",
       link: "https://taptoqr.moritzreis.dev/",
@@ -95,7 +95,7 @@ const DATA: Data = {
       title: "TeilFair",
       description:
         "Split expenses fairly with friends. Track shared costs, see who owes whom, and settle up easily. No sign-up required.",
-      tech: ["React"],
+      tech: ["TypeScript", "React"],
       logo: "https://teilfair.moritzreis.dev/teilfair-logo.svg",
       linkText: "View Project",
       link: "https://teilfair.moritzreis.dev/",
