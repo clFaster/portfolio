@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 import styled from "styled-components";
+import SEOHelmet from "../components/common/SEOHelmet.tsx";
 import {
   TerminalWindow,
   TerminalTitleBar,
@@ -109,6 +110,8 @@ function NotFound() {
 
   return (
     <>
+      <SEOHelmet pageName="not-found" />
+
       <Spacer $h={48} />
 
       <TerminalWindow $delay="0.1s">
