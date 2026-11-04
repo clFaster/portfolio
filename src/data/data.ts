@@ -65,6 +65,15 @@ const DATA: Data = {
 
   projects: [
     {
+      title: "Mireya",
+      description:
+        "An open digital-signage platform for managing screens, content assets, and scheduled campaigns, with a web admin interface and desktop and Android display clients.",
+      tech: ["C#", ".NET", "Blazor", "Avalonia"],
+      logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/csharp/csharp.png",
+      linkText: "View Project",
+      link: "https://github.com/clFaster/Mireya",
+    },
+    {
       title: "ExcaStoneBoard",
       description:
         "An unofficial multi-board manager for Excalidraw - manage multiple drawing boards without losing access to older ones.",
