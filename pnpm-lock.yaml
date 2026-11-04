@@ -198,7 +198,7 @@ importers:
         version: 7.14.2(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       styled-components:
         specifier: ^6.4.1
-        version: 6.4.1(css-to-react-native@3.2.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
+        version: 6.4.1(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
     devDependencies:
       '@eslint/js':
         specifier: ^10.0.1
@@ -653,9 +653,9 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  brace-expansion@5.0.5:
-    resolution: {integrity: sha512-VZznLgtwhn+Mact9tfiwx64fA9erHH/MCXEUfB/0bX/6Fz6ny5EGTXYltMocqg4xFAQZtnO3DHWWXi8RiuN7cQ==}
-    engines: {node: 18 || 20 || >=22}
+  brace-expansion@5.0.12:
+    resolution: {integrity: sha512-YovQ3rzhaLMIrDjNDMkNS01tea93qhEhG5xy8f6+R0l+dw3Ki+5sCoIoI942iuLZTHWogWktgwVDhU09iNEimQ==}
+    engines: {node: 20 || >=22}
 
   browserslist@4.28.2:
     resolution: {integrity: sha512-48xSriZYYg+8qXna9kwqjIVzuQxi+KYWp2+5nCYnYKPTr0LvD89Jqk2Or5ogxz0NUMfIjhh2lIUX/LyX9B4oIg==}
@@ -1660,7 +1660,7 @@ snapshots:
 
   baseline-browser-mapping@2.10.21: {}
 
-  brace-expansion@5.0.5:
+  brace-expansion@5.0.12:
     dependencies:
       balanced-match: 4.0.4
 
@@ -1672,8 +1672,7 @@ snapshots:
       node-releases: 2.0.38
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
-  camelize@1.0.1:
-    optional: true
+  camelize@1.0.1: {}
 
   caniuse-lite@1.0.30001790: {}
 
@@ -1687,15 +1686,13 @@ snapshots:
       shebang-command: 2.0.0
       which: 2.0.2
 
-  css-color-keywords@1.0.0:
-    optional: true
+  css-color-keywords@1.0.0: {}
 
   css-to-react-native@3.2.0:
     dependencies:
       camelize: 1.0.1
       css-color-keywords: 1.0.0
       postcss-value-parser: 4.2.0
-    optional: true
 
   csstype@3.2.3: {}
 
@@ -1949,7 +1946,7 @@ snapshots:
 
   minimatch@10.2.5:
     dependencies:
-      brace-expansion: 5.0.5
+      brace-expansion: 5.0.12
 
   motion-dom@12.38.0:
     dependencies:
@@ -1990,8 +1987,7 @@ snapshots:
 
   picomatch@4.0.4: {}
 
-  postcss-value-parser@4.2.0:
-    optional: true
+  postcss-value-parser@4.2.0: {}
 
   postcss@8.5.15:
     dependencies:
@@ -2074,14 +2070,14 @@ snapshots:
 
   source-map-js@1.2.1: {}
 
-  styled-components@6.4.1(css-to-react-native@3.2.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
+  styled-components@6.4.1(react-dom@19.2.5(react@19.2.5))(react@19.2.5):
     dependencies:
       '@emotion/is-prop-valid': 1.4.0
+      css-to-react-native: 3.2.0
       csstype: 3.2.3
       react: 19.2.5
       stylis: 4.3.6
     optionalDependencies:
-      css-to-react-native: 3.2.0
       react-dom: 19.2.5(react@19.2.5)
 
   stylis@4.3.6: {}
