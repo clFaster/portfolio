@@ -24,7 +24,7 @@
       "content": [
         {
           "label": "",
-          "value": "Diese Website ist eine private Portfolio-Website. Beim Besuch dieser Website werden keine personenbezogenen Daten aktiv erhoben, gespeichert oder verarbeitet."
+          "value": "Diese Website ist eine private Portfolio-Website. Personenbezogene Daten werden verarbeitet, soweit dies für den Betrieb der Website erforderlich ist oder Sie diese im Rahmen einer Kontaktaufnahme mitteilen. Einzelheiten finden Sie in den folgenden Abschnitten."
         }
       ]
     },
@@ -33,25 +33,7 @@
       "content": [
         {
           "label": "",
-          "value": "Diese Website wird auf einem externen Server gehostet. Die dabei technisch notwendigen Daten (z.B. IP-Adresse, Browsertyp, Zugriffszeitpunkt) können vom Hosting-Provider in Server-Log-Dateien gespeichert werden. Diese Datenverarbeitung erfolgt auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO) zur Sicherstellung des Betriebs und der Sicherheit der Website."
-        }
-      ]
-    },
-    {
-      "heading": "Google Fonts",
-      "content": [
-        {
-          "label": "",
-          "value": "Diese Website verwendet Google Fonts zur Darstellung von Schriftarten. Google Fonts ist ein Dienst der Google Ireland Limited (\"Google\"), Gordon House, Barrow Street, Dublin 4, Irland. Beim Aufruf dieser Website lädt Ihr Browser die benötigten Web Fonts von den Servern von Google. Dabei wird Ihre IP-Adresse an Google übertragen. Die Nutzung von Google Fonts erfolgt im Interesse einer einheitlichen und ansprechenden Darstellung unserer Website. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Weitere Informationen zu Google Fonts finden Sie unter https://developers.google.com/fonts/faq und in der Datenschutzerklärung von Google: https://policies.google.com/privacy"
-        }
-      ]
-    },
-    {
-      "heading": "Content Delivery Network (jsDelivr)",
-      "content": [
-        {
-          "label": "",
-          "value": "Diese Website nutzt jsDelivr, ein Content Delivery Network (CDN), zur Auslieferung von Grafiken und Icons. jsDelivr ist ein Dienst der Volentio JSD Limited. Beim Aufruf dieser Website lädt Ihr Browser die benötigten Ressourcen von den Servern von jsDelivr. Dabei wird Ihre IP-Adresse an jsDelivr übertragen. Die Nutzung eines CDN dient der schnelleren und effizienteren Bereitstellung von Inhalten unserer Website. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Weitere Informationen zu jsDelivr finden Sie unter https://www.jsdelivr.com/terms/privacy-policy"
+          "value": "Diese Website wird über GitHub Pages gehostet, einen Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Website werden technisch notwendige Daten (z.B. IP-Adresse, Browsertyp und Zugriffszeitpunkt) verarbeitet; GitHub protokolliert und speichert dabei die IP-Adresse der Besucher aus Sicherheitsgründen. Dabei kann eine Übermittlung personenbezogener Daten in die USA erfolgen. GitHub ist als Tochterunternehmen der Microsoft Corporation unter dem EU-U.S. Data Privacy Framework zertifiziert, auf dessen Grundlage (Angemessenheitsbeschluss der EU-Kommission, Art. 45 DSGVO) die Übermittlung erfolgt. Die Verarbeitung erfolgt auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f DSGVO), insbesondere an einer sicheren, zuverlässigen und effizienten Bereitstellung der Website. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub: https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement"
         }
       ]
     },
@@ -78,7 +60,7 @@
       "content": [
         {
           "label": "",
-          "value": "Bei Kontaktaufnahme per E-Mail werden die von Ihnen mitgeteilten Daten (E-Mail-Adresse, Name, Nachrichteninhalt) zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) und/oder auf unseren berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO)."
+          "value": "Bei Kontaktaufnahme per E-Mail werden die von Ihnen mitgeteilten Daten (E-Mail-Adresse, Name, Nachrichteninhalt) zur Bearbeitung Ihrer Anfrage gespeichert. Diese Daten werden nicht ohne Ihre Einwilligung weitergegeben. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) und/oder auf meinen berechtigten Interessen (Art. 6 Abs. 1 lit. f DSGVO)."
         }
       ]
     },
@@ -87,7 +69,7 @@
       "content": [
         {
           "label": "",
-          "value": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gemäß den Artikeln 15-21 DSGVO. Zur Ausübung dieser Rechte wenden Sie sich bitte an legal@moritzreis.dev. Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren."
+          "value": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch gemäß Art. 15-21 DSGVO. Soweit die Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO beruht, können Sie aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit Widerspruch gegen die Verarbeitung einlegen (Art. 21 DSGVO). Eine erteilte Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen (Art. 7 Abs. 3 DSGVO); die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt davon unberührt. Zur Ausübung Ihrer Rechte wenden Sie sich bitte an legal@moritzreis.dev. Sie haben außerdem das Recht, sich gemäß Art. 77 DSGVO bei der Österreichischen Datenschutzbehörde, Barichgasse 40–42, 1030 Wien (dsb.gv.at), über die Verarbeitung Ihrer personenbezogenen Daten zu beschweren."
         }
       ]
     },
@@ -110,5 +92,5 @@
       ]
     }
   ],
-  "lastUpdated": "Januar 2026"
+  "lastUpdated": "November 2026"
 }
