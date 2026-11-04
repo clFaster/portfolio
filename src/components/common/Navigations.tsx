@@ -50,6 +50,27 @@ const NavLinks = styled.div`
   margin-left: auto;
 `;
 
+const PaletteButton = styled.button`
+  border: 1px solid var(--term-border);
+  border-radius: 4px;
+  padding: 5px 8px;
+  background: transparent;
+  color: var(--term-text-muted);
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--term-green);
+    color: var(--term-green);
+  }
+
+  @media (max-width: 640px) {
+    display: none;
+  }
+`;
+
 const NavLink = styled(Link)<{ $isActive: boolean }>`
   color: ${(p) =>
     p.$isActive ? "var(--term-green)" : "var(--term-text-secondary)"};
@@ -128,6 +149,13 @@ const Navigations = () => {
         >
           projects
         </NavLink>
+        <PaletteButton
+          type="button"
+          aria-label="Open command palette (Control or Command K)"
+          onClick={() => window.dispatchEvent(new Event("open-command-palette"))}
+        >
+          ⌘K
+        </PaletteButton>
       </NavLinks>
     </NavBar>
   );
