@@ -109,6 +109,7 @@ const CommandInput = styled.input`
 
 interface CommandPaletteProps {
   onRequestOpen?: () => void;
+  initialOpen?: boolean;
 }
 
 const isEditableTarget = (target: EventTarget | null) => {
@@ -122,10 +123,10 @@ const isEditableTarget = (target: EventTarget | null) => {
 const normalizeProjectName = (name: string) =>
   name.toLowerCase().replace(/[^a-z0-9]/g, "");
 
-function CommandPalette({ onRequestOpen }: CommandPaletteProps) {
+function CommandPalette({ onRequestOpen, initialOpen = false }: CommandPaletteProps) {
   const navigate = useNavigate();
   const shouldReduceMotion = useReducedMotion();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(initialOpen);
   const [command, setCommand] = useState("");
   const [output, setOutput] = useState([
     `Welcome to ${DATA.main.name}'s portfolio terminal.`,
@@ -176,6 +177,12 @@ function CommandPalette({ onRequestOpen }: CommandPaletteProps) {
     return () =>
       window.removeEventListener("open-command-palette", handleOpenRequest);
   }, [openPalette]);
+
+  useEffect(() => {
+    if (initialOpen) {
+      previousFocusRef.current = document.activeElement as HTMLElement | null;
+    }
+  }, [initialOpen]);
 
   useEffect(() => {
     if (!isOpen) return;

@@ -1,10 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./pages/Homepage.tsx";
-import About from "./pages/About.tsx";
-import Projects from "./pages/Projects.tsx";
-import Impressum from "./pages/Impressum.tsx";
-import Datenschutz from "./pages/Datenschutz.tsx";
-import NotFound from "./pages/NotFound.tsx";
 import ErrorPage from "./pages/ErrorPage.tsx";
 import { MainLayout } from "./MainLayout.tsx";
 import { HelmetProvider } from "react-helmet-async";
@@ -24,23 +19,33 @@ const router = createBrowserRouter([
           },
           {
             path: "/about",
-            element: <About />,
+            lazy: async () => ({
+              Component: (await import("./pages/About.tsx")).default,
+            }),
           },
           {
             path: "/projects",
-            element: <Projects />,
+            lazy: async () => ({
+              Component: (await import("./pages/Projects.tsx")).default,
+            }),
           },
           {
             path: "/impressum",
-            element: <Impressum />,
+            lazy: async () => ({
+              Component: (await import("./pages/Impressum.tsx")).default,
+            }),
           },
           {
             path: "/datenschutz",
-            element: <Datenschutz />,
+            lazy: async () => ({
+              Component: (await import("./pages/Datenschutz.tsx")).default,
+            }),
           },
           {
             path: "*",
-            element: <NotFound />,
+            lazy: async () => ({
+              Component: (await import("./pages/NotFound.tsx")).default,
+            }),
           },
         ],
       },
