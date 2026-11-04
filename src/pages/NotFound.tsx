@@ -2,12 +2,10 @@ import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 import styled from "styled-components";
 import SEOHelmet from "../components/common/SEOHelmet.tsx";
+import TerminalHeader from "../components/common/TerminalHeader.tsx";
 import {
   TerminalWindow,
-  TerminalTitleBar,
   TerminalBody,
-  WindowDots,
-  Dot,
   Spacer,
   blink,
 } from "../components/styled/TerminalStyled.ts";
@@ -115,14 +113,7 @@ function NotFound() {
       <Spacer $h={48} />
 
       <TerminalWindow $delay="0.1s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/404
-        </TerminalTitleBar>
+        <TerminalHeader path="~/moritzreis/404" />
         <TerminalBody>
           <ErrorCode>404</ErrorCode>
           <ErrorMessage>

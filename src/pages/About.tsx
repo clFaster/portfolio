@@ -1,17 +1,16 @@
 import DATA from "../data/data";
 import styled from "styled-components";
 import SEOHelmet from "../components/common/SEOHelmet.tsx";
+import TerminalHeader from "../components/common/TerminalHeader.tsx";
+import CopyEmail from "../components/common/CopyEmail.tsx";
 import {
   TerminalWindow,
-  TerminalTitleBar,
   TerminalBody,
   WindowDots,
   Dot,
   SectionComment,
-  Prompt,
   CommentBlock,
   SocialCmd,
-  ContactCmd,
   Spacer,
   getSocialLabel,
 } from "../components/styled/TerminalStyled.ts";
@@ -60,18 +59,11 @@ function About() {
 
       {/* ── About ── */}
       <TerminalWindow $delay="0.1s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/about.md
-        </TerminalTitleBar>
+        <TerminalHeader path="~/moritzreis/about.md" />
         <TerminalBody>
           <AboutGrid>
             <AboutText>
-              <SectionComment>&#47;&#47; About</SectionComment>
+              <SectionComment>About</SectionComment>
               <AboutTitle>{DATA.about.title}</AboutTitle>
               <CommentBlock>{DATA.about.description}</CommentBlock>
               <div>
@@ -88,15 +80,12 @@ function About() {
                     {getSocialLabel(url)}
                   </SocialCmd>
                 ))}
-                <SocialCmd href={`mailto:${DATA.main.email}`}>
-                  {DATA.main.email}
-                </SocialCmd>
               </SocialLinks>
             </AboutText>
 
             <PortraitFrame>
               <PortraitTitleBar>
-                <WindowDots>
+                <WindowDots aria-hidden="true">
                   <Dot $color="#ff5f57" />
                   <Dot $color="#febc2e" />
                   <Dot $color="#28c840" />
@@ -113,22 +102,10 @@ function About() {
 
       {/* ── Contact ── */}
       <TerminalWindow $delay="0.3s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/contact.sh
-        </TerminalTitleBar>
+        <TerminalHeader path="~/moritzreis/contact.sh" />
         <TerminalBody>
-          <SectionComment>&#47;&#47; Get in touch</SectionComment>
-          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <Prompt>&gt;</Prompt>
-            <ContactCmd href={`mailto:${DATA.main.email}`}>
-              mail --to {DATA.main.email}
-            </ContactCmd>
-          </div>
+          <SectionComment>Get in touch</SectionComment>
+          <CopyEmail email={DATA.main.email} />
         </TerminalBody>
       </TerminalWindow>
     </>

@@ -1,11 +1,9 @@
 import impressumData from "../data/impressum.json";
 import SEOHelmet from "../components/common/SEOHelmet.tsx";
+import TerminalHeader from "../components/common/TerminalHeader.tsx";
 import {
   TerminalWindow,
-  TerminalTitleBar,
   TerminalBody,
-  WindowDots,
-  Dot,
   SectionComment,
   Spacer,
 } from "../components/styled/TerminalStyled.ts";
@@ -27,17 +25,10 @@ function Impressum() {
       <Spacer $h={48} />
 
       <TerminalWindow $delay="0.1s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/legal/impressum.md
-        </TerminalTitleBar>
+        <TerminalHeader path="~/moritzreis/legal/impressum.md" />
         <TerminalBody>
           <SectionComment>
-            &#47;&#47; {impressumData.title} &mdash; {impressumData.subtitle}
+            {impressumData.title} &mdash; {impressumData.subtitle}
           </SectionComment>
 
           {impressumData.sections.map((section, index) => (

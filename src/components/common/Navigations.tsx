@@ -73,8 +73,9 @@ const NavLink = styled(Link)<{ $isActive: boolean }>`
   }
 
   &::before {
-    content: "${(p) => (p.$isActive ? "> " : "")}";
+    content: "> ";
     color: var(--term-green);
+    visibility: ${(p) => (p.$isActive ? "visible" : "hidden")};
   }
 
   @media (max-width: 640px) {
@@ -99,20 +100,32 @@ const Navigations = () => {
 
   return (
     <NavBar>
-      <WindowDots>
+      <WindowDots aria-hidden="true">
         <Dot $color="#ff5f57" />
         <Dot $color="#febc2e" />
         <Dot $color="#28c840" />
       </WindowDots>
       <TabLabel>{DATA.main.name} &mdash; portfolio</TabLabel>
       <NavLinks>
-        <NavLink to="/" $isActive={isActive("/")}>
+        <NavLink
+          to="/"
+          $isActive={isActive("/")}
+          aria-current={isActive("/") ? "page" : undefined}
+        >
           home
         </NavLink>
-        <NavLink to="/about" $isActive={isActive("/about")}>
+        <NavLink
+          to="/about"
+          $isActive={isActive("/about")}
+          aria-current={isActive("/about") ? "page" : undefined}
+        >
           about
         </NavLink>
-        <NavLink to="/projects" $isActive={isActive("/projects")}>
+        <NavLink
+          to="/projects"
+          $isActive={isActive("/projects")}
+          aria-current={isActive("/projects") ? "page" : undefined}
+        >
           projects
         </NavLink>
       </NavLinks>

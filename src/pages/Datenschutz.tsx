@@ -1,12 +1,10 @@
 import datenschutzData from "../data/datenschutz.json";
 import styled from "styled-components";
 import SEOHelmet from "../components/common/SEOHelmet.tsx";
+import TerminalHeader from "../components/common/TerminalHeader.tsx";
 import {
   TerminalWindow,
-  TerminalTitleBar,
   TerminalBody,
-  WindowDots,
-  Dot,
   SectionComment,
   Spacer,
 } from "../components/styled/TerminalStyled.ts";
@@ -42,17 +40,10 @@ function Datenschutz() {
       <Spacer $h={48} />
 
       <TerminalWindow $delay="0.1s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/legal/datenschutz.md
-        </TerminalTitleBar>
+        <TerminalHeader path="~/moritzreis/legal/datenschutz.md" />
         <TerminalBody>
           <SectionComment>
-            &#47;&#47; {datenschutzData.title} &mdash;{" "}
+            {datenschutzData.title} &mdash;{" "}
             {datenschutzData.subtitle}
           </SectionComment>
 

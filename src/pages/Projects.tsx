@@ -1,25 +1,13 @@
-import DATA from "../data/data";
 import SEOHelmet from "../components/common/SEOHelmet.tsx";
+import TerminalHeader from "../components/common/TerminalHeader.tsx";
+import ProjectTimeline from "../components/common/ProjectTimeline.tsx";
 import {
   TerminalWindow,
-  TerminalTitleBar,
   TerminalBody,
-  WindowDots,
-  Dot,
   SectionComment,
   CommentBlock,
   Spacer,
 } from "../components/styled/TerminalStyled.ts";
-import {
-  ProjectList,
-  ProjectRow,
-  CommitDot,
-  ProjectInfo,
-  ProjectName,
-  ProjectDesc,
-  TagRow,
-  TechTag,
-} from "../components/styled/ProjectTimelineStyled.ts";
 
 /* ── COMPONENT ── */
 
@@ -32,16 +20,9 @@ function Projects() {
 
       {/* ── Intro ── */}
       <TerminalWindow $delay="0.1s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/README.md
-        </TerminalTitleBar>
+        <TerminalHeader path="~/moritzreis/README.md" />
         <TerminalBody>
-          <SectionComment>&#47;&#47; Code Chronicles</SectionComment>
+          <SectionComment>Code Chronicles</SectionComment>
           <CommentBlock>
             Welcome to my project showcase, where I've compiled a collection of
             tools and solutions crafted across diverse technologies. Each
@@ -58,37 +39,10 @@ function Projects() {
 
       {/* ── Project List ── */}
       <TerminalWindow $delay="0.3s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/projects &mdash; git log --oneline
-        </TerminalTitleBar>
+        <TerminalHeader path="~/moritzreis/projects — git log --oneline" />
         <TerminalBody>
-          <SectionComment>&#47;&#47; Projects</SectionComment>
-          <ProjectList>
-            {DATA.projects.map((project) => (
-              <ProjectRow
-                key={project.title}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <CommitDot />
-                <ProjectInfo>
-                  <ProjectName>{project.title}</ProjectName>
-                  <ProjectDesc>{project.description}</ProjectDesc>
-                </ProjectInfo>
-                <TagRow>
-                  {project.tech.map((tech) => (
-                    <TechTag key={`${project.title}-${tech}`}>{tech}</TechTag>
-                  ))}
-                </TagRow>
-              </ProjectRow>
-            ))}
-          </ProjectList>
+          <SectionComment>Projects</SectionComment>
+          <ProjectTimeline />
         </TerminalBody>
       </TerminalWindow>
     </>

@@ -1,40 +1,28 @@
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import DATA from "../data/data";
 import styled from "styled-components";
 import SEOHelmet from "../components/common/SEOHelmet.tsx";
+import TerminalHeader from "../components/common/TerminalHeader.tsx";
+import ProjectTimeline from "../components/common/ProjectTimeline.tsx";
 import {
   TerminalWindow,
-  TerminalTitleBar,
   TerminalBody,
   WindowDots,
   Dot,
   SectionComment,
   Prompt,
   CommentBlock,
-  SocialCmd,
-  ContactCmd,
   Spacer,
   blink,
-  typeIn,
-  getSocialLabel,
 } from "../components/styled/TerminalStyled.ts";
 import {
   TwoColumnGrid as HeroGrid,
-  SocialLinks,
   PromptLine,
   PortraitFrame,
   PortraitTitleBar,
   PortraitImage,
 } from "../components/styled/ProfileStyled.ts";
-import {
-  ProjectList,
-  ProjectRow,
-  CommitDot,
-  ProjectInfo,
-  ProjectName,
-  ProjectDesc,
-  TagRow,
-  TechTag,
-} from "../components/styled/ProjectTimelineStyled.ts";
 
 /* ── HERO ── */
 
@@ -44,96 +32,137 @@ const HeroText = styled.div`
   gap: 20px;
 `;
 
-const TypedLine = styled.div`
+const NameTitle = styled.h1`
+  color: var(--term-text);
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+`;
+
+const TypedLine = styled.h2`
   font-family: "JetBrains Mono", monospace;
-  font-size: 24px;
+  font-size: clamp(18px, 2.5vw, 24px);
   font-weight: 700;
   color: var(--term-text);
   line-height: 1.35;
   display: flex;
   gap: 12px;
 
-  @media (max-width: 860px) {
-    font-size: 20px;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 18px;
-    gap: 8px;
-  }
 `;
 
 const TypedText = styled.span`
-  display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: ${typeIn} 2.5s steps(40, end) forwards;
-  max-width: 100%;
+  min-width: 0;
+`;
+
+const PendingText = styled.span`
+  visibility: hidden;
+`;
+
+const Cursor = styled.span`
+  position: relative;
 
   &::after {
     content: "|";
+    position: absolute;
+    left: 2px;
     color: var(--term-green);
-    margin-left: 4px;
     animation: ${blink} 0.8s step-end infinite;
   }
 
-  @media (max-width: 680px) {
-    white-space: normal;
-    animation: none;
-    overflow: visible;
+  @media (prefers-reduced-motion: reduce) {
+    &::after {
+      animation: none;
+    }
+  }
+`;
+
+const FeaturedHint = styled.p`
+  margin: -4px 0 16px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+  color: var(--term-text-secondary);
+
+  &::before {
+    content: "> ";
+    color: var(--term-green);
+  }
+
+  span {
+    margin-left: 12px;
+  }
+`;
+
+const AllProjectsLink = styled(Link)`
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--term-green);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 13px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 `;
 
 /* ── COMPONENT ── */
 
+const featuredProjects = DATA.projects.filter((project) => project.featured);
+
 function Homepage() {
+  const [typedTitle, setTypedTitle] = useState(() =>
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? DATA.homepage.title
+      : "",
+  );
+
+  useEffect(() => {
+    const title = DATA.homepage.title;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    let characterIndex = 0;
+    const timer = window.setInterval(() => {
+      characterIndex += 1;
+      setTypedTitle(title.slice(0, characterIndex));
+
+      if (characterIndex >= title.length) {
+        window.clearInterval(timer);
+      }
+    }, 36);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
   return (
     <>
       <SEOHelmet pageName="home" />
 
       <Spacer $h={48} />
 
-      {/* ── Hero ── */}
       <TerminalWindow $delay="0.1s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/intro.sh
-        </TerminalTitleBar>
+        <TerminalHeader path="~/moritzreis/intro.sh" />
         <TerminalBody>
           <HeroGrid>
             <HeroText>
-              <TypedLine>
-                <Prompt>&gt;</Prompt>
-                <TypedText>{DATA.homepage.title}</TypedText>
+              <PromptLine>whoami</PromptLine>
+              <NameTitle>{DATA.main.name}</NameTitle>
+              <TypedLine aria-label={DATA.homepage.title}>
+                <Prompt aria-hidden="true">&gt;</Prompt>
+                <TypedText aria-hidden="true">
+                  {typedTitle}
+                  <Cursor />
+                  <PendingText>
+                    {DATA.homepage.title.slice(typedTitle.length)}
+                  </PendingText>
+                </TypedText>
               </TypedLine>
               <CommentBlock>{DATA.homepage.description}</CommentBlock>
-              <div>
-                <PromptLine>ls socials/</PromptLine>
-              </div>
-              <SocialLinks>
-                {Object.values(DATA.socials).map((url) => (
-                  <SocialCmd
-                    key={url}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {getSocialLabel(url)}
-                  </SocialCmd>
-                ))}
-                <SocialCmd href={`mailto:${DATA.main.email}`}>
-                  {DATA.main.email}
-                </SocialCmd>
-              </SocialLinks>
             </HeroText>
 
             <PortraitFrame>
               <PortraitTitleBar>
-                <WindowDots>
+                <WindowDots aria-hidden="true">
                   <Dot $color="#ff5f57" />
                   <Dot $color="#febc2e" />
                   <Dot $color="#28c840" />
@@ -151,59 +180,20 @@ function Homepage() {
 
       <Spacer $h={48} />
 
-      {/* ── Projects ── */}
       <TerminalWindow $delay="0.3s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/projects
-        </TerminalTitleBar>
+        <TerminalHeader path="~/moritzreis/projects/featured" />
         <TerminalBody>
-          <SectionComment>&#47;&#47; Projects</SectionComment>
-          <ProjectList>
-            {DATA.projects.map((project) => (
-              <ProjectRow
-                key={project.title}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <CommitDot />
-                <ProjectInfo>
-                  <ProjectName>{project.title}</ProjectName>
-                  <ProjectDesc>{project.description}</ProjectDesc>
-                </ProjectInfo>
-                <TagRow>
-                  {project.tech.map((tech) => (
-                    <TechTag key={`${project.title}-${tech}`}>{tech}</TechTag>
-                  ))}
-                </TagRow>
-              </ProjectRow>
-            ))}
-          </ProjectList>
-        </TerminalBody>
-      </TerminalWindow>
-
-      <Spacer $h={48} />
-
-      {/* ── Contact ── */}
-      <TerminalWindow $delay="0.5s">
-        <TerminalTitleBar>
-          <WindowDots>
-            <Dot $color="#ff5f57" />
-            <Dot $color="#febc2e" />
-            <Dot $color="#28c840" />
-          </WindowDots>
-          ~/moritzreis/contact.sh
-        </TerminalTitleBar>
-        <TerminalBody>
-          <SectionComment>&#47;&#47; Get in touch</SectionComment>
-          <ContactCmd href={`mailto:${DATA.main.email}`}>
-            mail --to {DATA.main.email}
-          </ContactCmd>
+          <SectionComment>Featured Projects</SectionComment>
+          <FeaturedHint>
+            ls projects/ --featured
+            <span>
+              ({featuredProjects.length} of {DATA.projects.length})
+            </span>
+          </FeaturedHint>
+          <ProjectTimeline projects={featuredProjects} />
+          <AllProjectsLink to="/projects">
+            ls projects/ --all &rarr;
+          </AllProjectsLink>
         </TerminalBody>
       </TerminalWindow>
     </>

@@ -4,9 +4,24 @@ export const ProjectList = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 -12px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 17px;
+    width: 2px;
+    background: var(--term-border);
+  }
 
   @media (max-width: 640px) {
     margin: 0 -8px;
+
+    &::before {
+      left: 13px;
+    }
   }
 `;
 
@@ -29,6 +44,12 @@ export const ProjectRow = styled.a`
     background: rgba(0, 255, 136, 0.03);
   }
 
+  &:focus-visible {
+    outline: 2px solid var(--term-green);
+    outline-offset: -2px;
+    background: rgba(0, 255, 136, 0.05);
+  }
+
   @media (max-width: 640px) {
     grid-template-columns: 20px 1fr;
     gap: 12px;
@@ -43,20 +64,9 @@ export const CommitDot = styled.div`
   background: var(--term-green);
   margin-top: 6px;
   position: relative;
+  z-index: 1;
   flex-shrink: 0;
 
-  ${ProjectRow}:not(:last-child) & {
-    &::after {
-      content: "";
-      position: absolute;
-      top: 14px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: calc(100% + 26px);
-      background: var(--term-border);
-    }
-  }
 `;
 
 export const ProjectInfo = styled.div`
@@ -64,6 +74,38 @@ export const ProjectInfo = styled.div`
   flex-direction: column;
   gap: 4px;
   min-width: 0;
+`;
+
+export const ProjectMeta = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--term-text-secondary);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+`;
+
+export const ProjectYear = styled.span``;
+
+export const ProjectStatus = styled.span<{ $status: "active" | "archived" }>`
+  color: ${(p) =>
+    p.$status === "active" ? "var(--term-green)" : "var(--term-text-secondary)"};
+  border: 1px solid
+    ${(p) =>
+      p.$status === "active"
+        ? "rgba(0, 255, 136, 0.3)"
+        : "var(--term-border)"};
+  border-radius: 999px;
+  padding: 1px 7px;
+`;
+
+export const ProjectDataNote = styled.p`
+  margin-top: 16px;
+  color: var(--term-text-secondary);
+  font-size: 12px;
+  line-height: 1.5;
 `;
 
 export const ProjectName = styled.span`

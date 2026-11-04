@@ -49,7 +49,7 @@ const FooterLink = styled(Link)`
 
 const FooterCredits = styled.div`
   margin-top: 8px;
-  color: var(--term-border);
+  color: var(--term-text-secondary);
 `;
 
 const Footer = () => {

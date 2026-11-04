@@ -7,11 +7,6 @@ export const blink = keyframes`
   50% { opacity: 0; }
 `;
 
-export const typeIn = keyframes`
-  from { width: 0; }
-  to { width: 100%; }
-`;
-
 export const fadeUp = keyframes`
   from { opacity: 0; transform: translateY(16px); }
   to { opacity: 1; transform: translateY(0); }
@@ -30,7 +25,7 @@ export const promptPulse = keyframes`
   --term-border:     #30363D
   --term-text:       #E6EDF3
   --term-text-secondary: #8B949E
-  --term-text-muted: #484F58
+  --term-text-muted: #8B949E
   --term-green:      #00FF88
   --term-blue:       #58A6FF
   --term-purple:     #BC8CFF
@@ -40,7 +35,9 @@ export const promptPulse = keyframes`
 
 export const Page = styled.div`
   min-height: 100vh;
-  background: var(--term-bg);
+  background:
+    radial-gradient(ellipse at 50% 0, rgba(0, 255, 136, 0.045), transparent 55%),
+    var(--term-bg);
   color: var(--term-text);
   font-family: "Manrope", sans-serif;
   overflow-x: hidden;
@@ -60,6 +57,12 @@ export const Page = styled.div`
       rgba(0, 0, 0, 0.06) 2px,
       rgba(0, 0, 0, 0.06) 4px
     );
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &::after {
+      display: none;
+    }
   }
 `;
 
@@ -82,6 +85,10 @@ export const TerminalWindow = styled.section<{ $delay?: string }>`
   overflow: hidden;
   animation: ${fadeUp} 0.5s ease both;
   animation-delay: ${(p) => p.$delay ?? "0s"};
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 `;
 
 export const TerminalTitleBar = styled.div`
@@ -145,6 +152,10 @@ export const SectionComment = styled.h2`
   margin-bottom: 24px;
   letter-spacing: 0.5px;
 
+  &::before {
+    content: "// " / "";
+  }
+
   @media (max-width: 480px) {
     font-size: 13px;
     margin-bottom: 20px;
@@ -157,6 +168,10 @@ export const Prompt = styled.span`
   color: var(--term-green);
   flex-shrink: 0;
   animation: ${promptPulse} 3s ease-in-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 `;
 
 export const CommentBlock = styled.p`
@@ -169,7 +184,7 @@ export const CommentBlock = styled.p`
   border-left: 2px solid var(--term-border);
 
   &::before {
-    content: "// ";
+    content: "// " / "";
     color: var(--term-text-muted);
     font-family: "JetBrains Mono", monospace;
   }
@@ -201,42 +216,14 @@ export const SocialCmd = styled.a`
     text-shadow: 0 0 8px rgba(0, 255, 136, 0.3);
   }
 
+  &:focus-visible {
+    outline: 2px solid var(--term-green);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
   @media (max-width: 480px) {
     font-size: 12px;
-  }
-`;
-
-/* ── CONTACT COMMAND BUTTON ── */
-
-export const ContactCmd = styled.a`
-  font-family: "JetBrains Mono", monospace;
-  font-size: 14px;
-  color: var(--term-blue);
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
-  border: 1px solid var(--term-border);
-  border-radius: 6px;
-  transition: all 0.2s ease;
-  background: transparent;
-
-  &::before {
-    content: "$ ";
-    color: var(--term-green);
-  }
-
-  &:hover {
-    border-color: var(--term-green);
-    color: var(--term-green);
-    box-shadow: 0 0 16px rgba(0, 255, 136, 0.15);
-    background: rgba(0, 255, 136, 0.04);
-  }
-
-  @media (max-width: 480px) {
-    font-size: 13px;
-    padding: 8px 16px;
   }
 `;
 

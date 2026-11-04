@@ -27,8 +27,12 @@ export const SocialLinks = styled.div`
 export const PromptLine = styled.span`
   font-family: "JetBrains Mono", monospace;
   font-size: 13px;
-  color: var(--term-text-muted);
+  color: var(--term-text-secondary);
   animation: ${promptPulse} 3s ease-in-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 
   &::before {
     content: "$ ";
