@@ -28,6 +28,10 @@ pnpm preview
 pnpm lint
 ```
 
+TypeScript 7 is installed as `@typescript/native`; the `typescript` dependency
+uses the TypeScript 6 compatibility package for tools such as `typescript-eslint`
+that have not yet added TypeScript 7 support.
+
 ## Content Updates
 
 Most copy lives here:
