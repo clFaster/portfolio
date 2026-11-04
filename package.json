@@ -23,7 +23,7 @@
     "@fortawesome/react-fontawesome": "^3.3.1",
     "font-awesome": "^4.7.0",
     "framer-motion": "^12.38.0",
-    "react": "^19.2.5",
+    "react": "^19.3.1",
     "react-dom": "^19.2.5",
     "react-helmet-async": "^3.0.0",
     "react-router-dom": "^7.14.2",
@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/react": "^19.2.14",
+    "@types/react": "^19.3.0",
     "@types/react-dom": "^19.2.3",
     "@types/react-helmet": "^6.1.11",
     "@vitejs/plugin-react": "^6.0.1",
